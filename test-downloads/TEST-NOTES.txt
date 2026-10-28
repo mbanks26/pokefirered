@@ -1,0 +1,23 @@
+FireRed Rev 1 - Sabrina Follower test build
+
+Import the .gba file into Manic EMU using its normal ROM import option.
+Sabrina joins after you speak to her outside Red's house in Pallet Town.
+Existing saves can recruit her by returning to that conversation.
+
+This build preserves the custom Leaf/Sabrina story and previous dialogue.
+Automated validation: 13 integration checks and 14 mGBA scenario groups passed,
+including Oak's introduction/escort, starter, first rival battle, real in-game
+save and cold-boot Continue, doors, walking, running, Route 1/Viridian,
+ledge regrouping, and Oak's parcel/Pokedex sequence.
+Running shoes and Repel were enabled diagnostically for movement tests only;
+the released ROM does not grant those early.
+
+Limitations: Sabrina hides during cycling, surfing, link/Quest Log scenes,
+and most later cutscenes, then restores on foot. Ledges use safe regrouping,
+not a separate follower hop. The original Saffron Gym challenge is preserved;
+the future substitute trainer and shiny starter changes are not implemented.
+Manic EMU itself and all later maps have not been tested.
+
+Keep your original ROM/save. Use in-game Save/Continue when changing builds;
+old emulator save states can reference incompatible code addresses.
+Development is paused at this build. No environment or Git branches published.
