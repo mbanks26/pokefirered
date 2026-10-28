@@ -1,13 +1,33 @@
-@ Optional Sabrina conversations. These read story flags without changing progression.
+@ Sabrina joins after her first Pallet conversation. Later conversations only
+@ read story flags; they never advance Oak's, Blue's, or the Gym story scripts.
 @ MSGBOX_NPC handles locking, facing the player, and releasing for each branch.
 
 Sabrina_EventScript_PalletTown::
+	goto_if_unset FLAG_SABRINA_FOLLOWER_ACTIVE, Sabrina_EventScript_Join
 	goto_if_set FLAG_SYS_GAME_CLEAR, Sabrina_EventScript_PalletChampion
 	goto_if_set FLAG_BADGE08_GET, Sabrina_EventScript_PalletEightBadges
 	goto_if_set FLAG_BADGE06_GET, Sabrina_EventScript_PalletMarshBadge
 	goto_if_set FLAG_BADGE01_GET, Sabrina_EventScript_PalletFirstBadge
 	goto_if_set FLAG_SYS_POKEMON_GET, Sabrina_EventScript_PalletPartner
 	msgbox Sabrina_Text_PalletIntro, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_Join::
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_POKEMON_GET, Sabrina_EventScript_JoinDuringJourney
+	msgbox Sabrina_Text_PalletIntro
+	goto Sabrina_EventScript_StartCompanion
+
+Sabrina_EventScript_JoinDuringJourney::
+	msgbox Sabrina_Text_JoinDuringJourney
+
+Sabrina_EventScript_StartCompanion::
+	msgbox Sabrina_Text_JoinCompanion
+	closemessage
+	setflag FLAG_SABRINA_FOLLOWER_ACTIVE
+	special StartSabrinaFollower
+	release
 	end
 
 Sabrina_EventScript_PalletChampion::
@@ -157,4 +177,34 @@ Sabrina_EventScript_CeladonAfterGym::
 
 Sabrina_EventScript_CeladonAfterGymRockets::
 	msgbox Sabrina_Text_CeladonAfterGymRockets, MSGBOX_NPC
+	end
+
+@ Used on routes and in interiors without a location-specific conversation.
+Sabrina_EventScript_Companion::
+	goto_if_set FLAG_SYS_GAME_CLEAR, Sabrina_EventScript_CompanionChampion
+	goto_if_set FLAG_BADGE08_GET, Sabrina_EventScript_CompanionEightBadges
+	goto_if_set FLAG_BADGE06_GET, Sabrina_EventScript_CompanionMarshBadge
+	goto_if_set FLAG_BADGE01_GET, Sabrina_EventScript_CompanionFirstBadge
+	goto_if_set FLAG_SYS_POKEMON_GET, Sabrina_EventScript_CompanionJourney
+	msgbox Sabrina_Text_CompanionBeforeStarter, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_CompanionJourney::
+	msgbox Sabrina_Text_CompanionJourney, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_CompanionFirstBadge::
+	msgbox Sabrina_Text_CompanionFirstBadge, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_CompanionMarshBadge::
+	msgbox Sabrina_Text_CompanionMarshBadge, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_CompanionEightBadges::
+	msgbox Sabrina_Text_CompanionEightBadges, MSGBOX_NPC
+	end
+
+Sabrina_EventScript_CompanionChampion::
+	msgbox Sabrina_Text_CompanionChampion, MSGBOX_NPC
 	end

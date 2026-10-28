@@ -43,7 +43,9 @@
 #define FLAG_TEMP_1F     (TEMP_FLAGS_START + 0x1F)
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 
-#define FLAG_0x020               0x020
+// Sabrina joins through her first Pallet Town conversation. This is a persistent
+// flag outside the temporary range; it also hides her stationary map copies.
+#define FLAG_SABRINA_FOLLOWER_ACTIVE 0x020
 #define FLAG_0x021               0x021
 #define FLAG_0x022               0x022
 #define FLAG_0x023               0x023

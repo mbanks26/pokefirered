@@ -13,6 +13,7 @@
 #include "quest_log.h"
 #include "random.h"
 #include "script.h"
+#include "sabrina_follower.h"
 #include "trainer_see.h"
 #include "trig.h"
 #include "constants/maps.h"
@@ -1501,7 +1502,24 @@ static bool8 GetAvailableObjectEventId(u16 localId, u8 mapNum, u8 mapGroup, u8 *
             return TRUE;
     }
     if (i >= OBJECT_EVENTS_COUNT)
+    {
+        // Story NPCs always take priority over the optional companion. The
+        // scan above also proved the requested native object is not loaded.
+        if (localId != LOCALID_SABRINA_FOLLOWER)
+        {
+            for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+            {
+                if (IsSabrinaFollower(&gObjectEvents[i]))
+                {
+                    RemoveObjectEventByLocalIdAndMap(LOCALID_SABRINA_FOLLOWER,
+                        gObjectEvents[i].mapNum, gObjectEvents[i].mapGroup);
+                    *objectEventId = i;
+                    return FALSE;
+                }
+            }
+        }
         return TRUE;
+    }
     *objectEventId = i;
     for (; i < OBJECT_EVENTS_COUNT; i++)
     {
@@ -1522,7 +1540,8 @@ void RemoveObjectEventByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
     u8 objectEventId;
     if (!TryGetObjectEventIdByLocalIdAndMap(localId, mapNum, mapGroup, &objectEventId))
     {
-        FlagSet(GetObjectEventFlagIdByObjectEventId(objectEventId));
+        if (localId != LOCALID_SABRINA_FOLLOWER)
+            FlagSet(GetObjectEventFlagIdByObjectEventId(objectEventId));
         RemoveObjectEvent(&gObjectEvents[objectEventId]);
     }
 }
@@ -2513,6 +2532,8 @@ static const u8 *GetObjectEventScriptPointerByLocalIdAndMap(u8 localId, u8 mapNu
 
 const u8 *GetObjectEventScriptPointerByObjectEventId(u8 objectEventId)
 {
+    if (IsSabrinaFollower(&gObjectEvents[objectEventId]))
+        return GetSabrinaFollowerScript();
     return GetObjectEventScriptPointerByLocalIdAndMap(gObjectEvents[objectEventId].localId, gObjectEvents[objectEventId].mapNum, gObjectEvents[objectEventId].mapGroup);
 }
 
@@ -2578,6 +2599,9 @@ static const struct ObjectEventTemplate *GetObjectEventTemplateByLocalIdAndMap(u
     const struct ObjectEventTemplate *templates;
     const struct MapHeader *mapHeader;
     u8 count;
+
+    if (localId == LOCALID_SABRINA_FOLLOWER)
+        return GetSabrinaFollowerTemplate();
 
     if (gSaveBlock1Ptr->location.mapNum == mapNum && gSaveBlock1Ptr->location.mapGroup == mapGroup)
     {
@@ -4904,7 +4928,7 @@ static bool8 DoesObjectCollideWithObjectAt(struct ObjectEvent *objectEvent, s16 
     for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
     {
         curObject = &gObjectEvents[i];
-        if (curObject->active && curObject != objectEvent)
+        if (curObject->active && curObject != objectEvent && !IsSabrinaFollower(curObject))
         {
             if ((curObject->currentCoords.x == x && curObject->currentCoords.y == y) || (curObject->previousCoords.x == x && curObject->previousCoords.y == y))
             {

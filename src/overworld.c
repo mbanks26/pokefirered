@@ -41,6 +41,7 @@
 #include "save_location.h"
 #include "scanline_effect.h"
 #include "script.h"
+#include "sabrina_follower.h"
 #include "script_pokemon_util.h"
 #include "start_menu.h"
 #include "tileset_anims.h"
@@ -1462,6 +1463,7 @@ static void OverworldBasic(void)
     ScriptContext_RunScript();
     RunTasks();
     AnimateSprites();
+    UpdateSabrinaFollower();
     CameraUpdate();
     SetQuestLogEvent_Arrived();
     UpdateCameraPanning();

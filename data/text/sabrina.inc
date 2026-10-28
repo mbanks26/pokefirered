@@ -297,3 +297,53 @@ Sabrina_Text_GymChampion::
     .string "You can visit without\n"
     .string "challenging the GYM, you know.$"
 
+Sabrina_Text_JoinDuringJourney::
+    .string "We've taken different roads.\n"
+    .string "I'd rather walk beside you.\p"
+    .string "You can tell me what I missed\n"
+    .string "as we go.$"
+
+Sabrina_Text_JoinCompanion::
+    .string "I've made up my mind.\n"
+    .string "I'm coming with you.\p"
+    .string "I'll stay close behind.\n"
+    .string "You choose the way.\p"
+    .string "And when you want to talk,\n"
+    .string "just turn around.$"
+
+Sabrina_Text_CompanionBeforeStarter::
+    .string "PROF. OAK is waiting.\n"
+    .string "Let's hear what he has to say.\p"
+    .string "I'll stay out of his way.\n"
+    .string "This is your beginning.$"
+
+Sabrina_Text_CompanionJourney::
+    .string "I like walking beside you.\n"
+    .string "Even a step behind.\p"
+    .string "Watch your POKéMON carefully.\n"
+    .string "They show you what they need.$"
+
+Sabrina_Text_CompanionFirstBadge::
+    .string "Your POKéMON trust you.\n"
+    .string "I see it without my powers.\p"
+    .string "Let's take the next road\n"
+    .string "one step at a time.$"
+
+Sabrina_Text_CompanionMarshBadge::
+    .string "At my GYM, I tested you.\n"
+    .string "Out here, I'm on your side.\p"
+    .string "Whatever the road brings,\n"
+    .string "you can talk to me.$"
+
+Sabrina_Text_CompanionEightBadges::
+    .string "You have all eight BADGES.\n"
+    .string "Remember how far you've come.\p"
+    .string "I'll leave the battles to you.\n"
+    .string "But the journey is ours.$"
+
+Sabrina_Text_CompanionChampion::
+    .string "Being CHAMPION suits you.\n"
+    .string "So does taking a quiet walk.\p"
+    .string "Where would you like to go?\n"
+    .string "I'm happy to come along.$"
+

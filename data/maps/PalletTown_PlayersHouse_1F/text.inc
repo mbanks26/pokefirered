@@ -1,7 +1,7 @@
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
-    .string "MOM: Your sister LEAF left on\n"
-    .string "her journey three months ago.\l"
-    .string "And now it's your turn to go!\p"
+    .string "MOM: Your twin sister LEAF\n"
+    .string "left on her journey three\l"
+    .string "months ago. It's your turn now!\p"
     .string "Oh, yes! PROF. OAK, next door,\n" 
     .string "was looking for you.$"
 
