@@ -1,25 +1,26 @@
 SaffronCity_Gym_Text_SabrinaIntro::
-    .string "I had a vision of your arrival.\p"
-    .string "I have had psychic powers since\n"
-    .string "I was a child.\p"
-    .string "It started when a spoon I\n"
-    .string "carelessly tossed, bent.\p"
-    .string "I dislike battling, but if you wish,\n"
-    .string "I will show you my powers!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
+    .string "SABRINA: You knew me before\n"
+    .string "anyone called me a GYM LEADER.\p"
+    .string "Since we were children,\n"
+    .string "you've kept surprising me.\p"
+    .string "I won't read your thoughts.\n"
+    .string "I want to see your choices.\p"
+    .string "Here, I won't hold back.\n"
+    .string "Give me your best battle!{PLAY_BGM}{MUS_ENCOUNTER_GYM_LEADER}$"
 
 SaffronCity_Gym_Text_SabrinaDefeat::
-    .string "This loss shocks me!\n"
-    .string "But, a loss is a loss.\p"
-    .string "I admit, I didn't work hard enough\n"
-    .string "to win.\p"
-    .string "Your victory has earned you the\n"
+    .string "You surprised me again.\n"
+    .string "That was a wonderful battle.\p"
+    .string "Your team has earned the\n"
     .string "MARSHBADGE.$"
 
 SaffronCity_Gym_Text_SabrinaPostBattle::
-    .string "Psychic power isn't something that\n"
-    .string "only a few people have.\p"
-    .string "Everyone has psychic power.\n"
-    .string "People just don't realize it.$"
+    .string "I'm proud of you, {PLAYER}.\n"
+    .string "I hope you know that.\p"
+    .string "Next time we meet,\n"
+    .string "let's leave the GYM behind.\p"
+    .string "I'd like a walk with you.\n"
+    .string "Just the two of us.$"
 
 SaffronCity_Gym_Text_ExplainMarshBadgeTakeThis::
     .string "The MARSHBADGE makes POKéMON up\n"
@@ -37,7 +38,10 @@ SaffronCity_Gym_Text_ReceivedTM04FromSabrina::
 SaffronCity_Gym_Text_ExplainTM04::
     .string "TM04 is CALM MIND.\p"
     .string "It makes the POKéMON concentrate\n"
-    .string "to raise both SP. ATK and SP. DEF.$"
+    .string "to raise SP. ATK and SP. DEF.\p"
+    .string "Remember our quiet walks?\n"
+    .string "That's how I clear my mind.\p"
+    .string "We should take another soon.$"
 
 SaffronCity_Gym_Text_BagFullOfOtherItems::
     .string "Your BAG is full of other items.$"

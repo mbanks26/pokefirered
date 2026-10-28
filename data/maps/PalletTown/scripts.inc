@@ -448,8 +448,4 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	release
 	end
 PalletTown_EventScript_Sabrina::
-    lock
-    faceplayer
-    msgbox PalletTown_Text_Sabrina, MSGBOX_DEFAULT
-    release
-    end
+	goto Sabrina_EventScript_PalletTown

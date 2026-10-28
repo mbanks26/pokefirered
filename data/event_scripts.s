@@ -1156,6 +1156,8 @@ EventScript_SetEnteringCyclingRoad::
 	end
 
 	.include "data/scripts/route23.inc"
+	.include "data/scripts/sabrina.inc"
+	.include "data/text/sabrina.inc"
 
 EventScript_GetElevatorFloor::
 	special GetElevatorFloor

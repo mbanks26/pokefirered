@@ -35,6 +35,3 @@ PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad::
 
 PalletTown_PlayersHouse_1F_Text_OopsWrongSide::
     .string "Oops, wrong side…$"
-
-PalletTown_Text_Sabrina:
-    .string "I've been expecting you, Red.$"
