@@ -1,9 +1,9 @@
 PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou::
-    .string "MOM: …Right.\n"
-    .string "All boys leave home someday.\l"
-    .string "It said so on TV.\p"
-    .string "Oh, yes. PROF. OAK, next door, was\n"
-    .string "looking for you.$"
+    .string "MOM: Your sister LEAF left on\n"
+    .string "her journey three months ago.\l"
+    .string "And now it's your turn to go!\p"
+    .string "Oh, yes! PROF. OAK, next door,\n" 
+    .string "was looking for you.$"
 
 PalletTown_PlayersHouse_1F_Text_AllGirlsLeaveOakLookingForYou::
     .string "MOM: …Right.\n"
@@ -36,3 +36,5 @@ PalletTown_PlayersHouse_1F_Text_MovieOnTVGirlOnBrickRoad::
 PalletTown_PlayersHouse_1F_Text_OopsWrongSide::
     .string "Oops, wrong side…$"
 
+PalletTown_Text_Sabrina:
+    .string "I've been expecting you, Red.$"
