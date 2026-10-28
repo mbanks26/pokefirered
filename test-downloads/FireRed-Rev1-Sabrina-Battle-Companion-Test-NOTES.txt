@@ -1,0 +1,27 @@
+FireRed Rev 1 - Sabrina Battle Companion test build
+
+Import the .gba into Manic EMU. Talk to Sabrina in Pallet Town first if she has
+not joined. Her combined battle-back artwork is then used for Red's normal
+wild and trainer introductions, including the first Blue battle.
+
+Sabrina observes in a static pose. Red keeps his original five frames and
+throw timing. Sabrina is never an additional trainer, battler, or party Pokemon.
+Native NPCs can move through their scripts; Sabrina yields before overlapping
+and reappears nearby. Existing follower/dialogue/Leaf work is preserved.
+
+Passed: 13 preservation/integration checks, 4 graphics checks, original follower
+progression regression, first Blue/wild/Route22 trainer battle intros and
+completion, original throw phases, solo-Red negative control, and diagnostic
+native-NPC movement with frame-by-frame overlap monitoring.
+
+Still needs Manic EMU review: artwork/colors at native size, ball alignment,
+intro clipping/slide, long play sessions and later NPC scripts. Safari,
+tutorials, link/multi, genuine doubles and every later encounter are untested.
+The original follower limitations (temporary hiding during surf/bike and most
+later cutscenes, safe ledge regrouping) remain.
+
+Keep your previous ROM and save. Use in-game Save/Continue rather than save
+states from another ROM build. The previous follower-only download is intact.
+
+Source commit: b41c0791fbaad92535dd8eeb664ce63b84e85fa6
+ROM SHA-256: 0b709bf2cd11f88f35072ad0386e8fc30015ad94b35ae581f135f47eed59b3eb
