@@ -55,6 +55,7 @@ class Emulator:
         self.pixels = None
         self.pixel_format = 0
         self.regions = []
+        self.on_frame = None
         self.directory = b'/tmp'
         self.options = {
             b'mgba_use_bios': b'OFF',
@@ -147,6 +148,8 @@ class Emulator:
         for _ in range(frames):
             self.lib.retro_run()
             self.frame += 1
+            if self.on_frame is not None:
+                self.on_frame()
         self.pressed = set()
 
     def tap(self, key, hold=2, release=12):

@@ -7,6 +7,8 @@ source /workspace/.pokefirered-env/activate.sh
 make -j5 GAME_VERSION=FIRERED GAME_REVISION=1 all syms
 python3 tools/sabrina_tests/test_integration.py
 python3 tools/sabrina_tests/test_follower_rom.py --rom pokefirered_rev1.gba
+python3 tools/sabrina_tests/test_battle_graphics.py
+python3 tools/sabrina_tests/test_battle_companion_rom.py --rom pokefirered_rev1.gba
 ```
 
 The integration suite uses Python's standard library, Git, and the C
@@ -44,3 +46,11 @@ Screenshots, test logs, and generated test saves go under
 saves to import over a player's own game. Manic EMU on iPhone still needs visual
 and control verification; an mGBA pass is not a claim that every map or cutscene
 has been tested.
+
+The battle companion runner includes the original follower progression suite,
+captures Blue/wild/trainer introductions, checks the actual sprite image table,
+64x64 4bpp OAM settings, party and battler counts, and Red's throwing phases.
+It also performs a clearly labeled diagnostic NPC movement into Sabrina's tile
+and a negative join-flag control. Frame-by-frame overworld checks reject native
+NPC/follower tile overlap. `--resume` can reuse its post-Pokédex checkpoint only
+when the stored ROM SHA-256 matches; use the full command for final validation.

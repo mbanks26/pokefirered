@@ -315,6 +315,16 @@ void UpdateSabrinaFollower(void)
     follower->mapNum = gSaveBlock1Ptr->location.mapNum;
     follower->mapGroup = gSaveBlock1Ptr->location.mapGroup;
     ObjectEventClearHeldMovementIfFinished(follower);
+    // Native actors have priority and may enter a companion's reserved tile
+    // during scripted movement. Yield before OAM is built, including the tile
+    // she is leaving, instead of drawing an actor through her mid-step.
+    if (IsOccupied(follower->currentCoords.x, follower->currentCoords.y, player)
+        || (follower->heldMovementActive
+            && IsOccupied(follower->previousCoords.x, follower->previousCoords.y, player)))
+    {
+        RemoveFollowerObjects();
+        return; // Reappear on a clear adjacent tile on the next field frame.
+    }
     dx = player->currentCoords.x - sFollower.playerPos.x;
     dy = player->currentCoords.y - sFollower.playerPos.y;
     if (dx != 0 || dy != 0)

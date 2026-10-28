@@ -51,6 +51,15 @@ const struct SpriteFrameImage gTrainerBackPicTable_Red[] =
     gTrainerBackPic_Red + 0x2000, 0x0800,
 };
 
+const struct SpriteFrameImage gTrainerBackPicTable_RedSabrina[] =
+{
+    gTrainerBackPic_RedSabrina, 0x0800,
+    gTrainerBackPic_RedSabrina + 0x0800, 0x0800,
+    gTrainerBackPic_RedSabrina + 0x1000, 0x0800,
+    gTrainerBackPic_RedSabrina + 0x1800, 0x0800,
+    gTrainerBackPic_RedSabrina + 0x2000, 0x0800,
+};
+
 const struct SpriteFrameImage gTrainerBackPicTable_Leaf[] =
 {
     gTrainerBackPic_Leaf, 0x0800,

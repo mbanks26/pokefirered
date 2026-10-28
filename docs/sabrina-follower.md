@@ -220,6 +220,7 @@ follower implementation:
 - Recurring Leaf story encounters and later Pokémon battles.
 - A substitute Psychic Gym Trainer conducting Sabrina's Saffron challenge while
   she retains her official Gym Leader title.
-- A combined Red/Sabrina player-side battle-back sprite, with Sabrina observing
-  rather than becoming an additional battler.
+- The combined Red/Sabrina battle-back sprite is now implemented; see
+  [the battle companion report](sabrina-battle-companion.md). Sabrina observes
+  while Red remains the only active trainer.
 - The recognizable original FireRed adventure with expanded story content.

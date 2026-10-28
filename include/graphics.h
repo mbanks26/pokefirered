@@ -3972,6 +3972,7 @@ extern const u32 gBerryPouchSpritePalette[];
 extern const u8 gBerryPouchBg1Tilemap[];
 
 extern const u8 gTrainerBackPic_Red[];
+extern const u8 gTrainerBackPic_RedSabrina[];
 extern const u8 gTrainerBackPic_Leaf[];
 extern const u8 gTrainerBackPic_Pokedude[];
 extern const u8 gTrainerBackPic_OldMan[];

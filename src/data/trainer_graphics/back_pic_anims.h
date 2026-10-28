@@ -86,5 +86,6 @@ const union AnimCmd *const *const gTrainerBackAnimsPtrTable[] = {
     sBackAnims_RSBrendan,
     sBackAnims_RSMay,
     sBackAnims_Pokedude,
-    sBackAnims_OldMan
+    sBackAnims_OldMan,
+    sBackAnims_Red
 };

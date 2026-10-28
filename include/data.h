@@ -54,6 +54,7 @@ extern const struct SpriteFrameImage gBattlerPicTable_OpponentLeft[];
 extern const struct SpriteFrameImage gBattlerPicTable_PlayerRight[];
 extern const struct SpriteFrameImage gBattlerPicTable_OpponentRight[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Red[];
+extern const struct SpriteFrameImage gTrainerBackPicTable_RedSabrina[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Leaf[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_Pokedude[];
 extern const struct SpriteFrameImage gTrainerBackPicTable_OldMan[];

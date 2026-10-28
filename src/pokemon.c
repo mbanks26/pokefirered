@@ -36,6 +36,7 @@
 #include "constants/hold_effects.h"
 #include "constants/battle_move_effects.h"
 #include "constants/union_room.h"
+#include "constants/flags.h"
 
 #define SPECIES_TO_HOENN(name)      [SPECIES_##name - 1] = HOENN_DEX_##name
 #define SPECIES_TO_NATIONAL(name)   [SPECIES_##name - 1] = NATIONAL_DEX_##name
@@ -1521,6 +1522,15 @@ const struct SpriteTemplate gSpriteTemplates_Battlers[MAX_BATTLERS_COUNT] =
 
 static const struct SpriteTemplate sTrainerBackSpriteTemplates[] = 
 {
+    [TRAINER_BACK_PIC_RED_SABRINA] = {
+        .tileTag = TAG_NONE,
+        .paletteTag = 0,
+        .oam = &gOamData_BattlerPlayer,
+        .anims = NULL,
+        .images = gTrainerBackPicTable_RedSabrina,
+        .affineAnims = gAffineAnims_BattleSpritePlayerSide,
+        .callback = SpriteCB_AllyMon,
+    },
     [TRAINER_BACK_PIC_RED] = {
         .tileTag = TAG_NONE,
         .paletteTag = 0,
@@ -2778,6 +2788,15 @@ void SetMultiuseSpriteTemplateToPokemon(u16 speciesTag, u8 battlerPosition)
 
 void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosition)
 {
+    // Visual companion only: reuse Red's five-frame throw, single 64x64 OBJ,
+    // and palette. Do not change the gender, party, controllers, or battle type.
+    if (trainerSpriteId == TRAINER_BACK_PIC_RED && gMain.inBattle
+        && (battlerPosition == B_POSITION_PLAYER_LEFT || battlerPosition == B_POSITION_PLAYER_RIGHT)
+        && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_LINK_IN_BATTLE | BATTLE_TYPE_MULTI
+            | BATTLE_TYPE_SAFARI | BATTLE_TYPE_OLD_MAN_TUTORIAL | BATTLE_TYPE_POKEDUDE))
+        && FlagGet(FLAG_SABRINA_FOLLOWER_ACTIVE))
+        trainerSpriteId = TRAINER_BACK_PIC_RED_SABRINA;
+
     gMultiuseSpriteTemplate.paletteTag = trainerSpriteId;
     if (battlerPosition == B_POSITION_PLAYER_LEFT || battlerPosition == B_POSITION_PLAYER_RIGHT)
     {
