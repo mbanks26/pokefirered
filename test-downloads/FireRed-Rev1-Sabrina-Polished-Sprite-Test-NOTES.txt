@@ -1,0 +1,27 @@
+FireRed Rev 1 - Sabrina polished battle sprite test build
+
+Sabrina now has cleaner custom FireRed-style battle artwork with refined blue
+hair highlights and silhouette. Her original FireRed red outfit is retained.
+The updated art appears behind Red after Sabrina joins in Pallet Town.
+
+Only the two battle-art PNGs change in production. Red keeps his original
+pixels, five-frame throw, colors and timing. Sabrina retains a static observer
+pose within the same 64x64 4bpp sprite and 16-color palette.
+
+Passed: Rev 1 build, 13 story/preservation checks, 4 graphics checks, complete
+mGBA follower regression, first Blue/wild/ordinary trainer battle intros and
+completion, Red throw phases, solo-Red negative control, and diagnostic NPC
+yielding. Native overlap was monitored over 33,326 overworld frames.
+
+Still needs Manic EMU visual review: appearance/colors at normal screen size,
+clipping and ball alignment. Later encounters, Safari, tutorials, link/multi,
+and genuine doubles are not covered by these emulator tests. Previous
+follower compatibility limits remain.
+
+Import the .gba from Files into Manic EMU. Keep your previous ROM and save.
+Use in-game Save/Continue instead of another build's emulator save state.
+Previous follower-only and battle-companion downloads are preserved.
+
+Source branch: feature/sabrina-sprite-polish
+Source commit: 534bd3a2543cf93e91f96052bc9d4c1bd824ea0c
+ROM SHA-256: f4334b79b3538a1061606b22fecd40fd6e65c1f2e0525256f696abcefc68aaf1

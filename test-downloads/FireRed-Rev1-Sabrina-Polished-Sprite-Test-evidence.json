@@ -1,0 +1,112 @@
+{
+  "rom_sha256": "f4334b79b3538a1061606b22fecd40fd6e65c1f2e0525256f696abcefc68aaf1",
+  "captures": {
+    "first-blue": {
+      "sprite": 3,
+      "size": [
+        64,
+        64
+      ],
+      "flags": 28,
+      "images": 136537232,
+      "palette": 0
+    },
+    "wild": {
+      "sprite": 3,
+      "size": [
+        64,
+        64
+      ],
+      "flags": 4,
+      "images": 136537232,
+      "palette": 0
+    },
+    "wild-solo-control": {
+      "sprite": 3,
+      "size": [
+        64,
+        64
+      ],
+      "flags": 4,
+      "images": 136537192,
+      "palette": 0
+    },
+    "trainer": {
+      "sprite": 3,
+      "size": [
+        64,
+        64
+      ],
+      "flags": 12,
+      "images": 136537232,
+      "palette": 0
+    }
+  },
+  "throw_command_frames": [
+    [
+      "first-blue",
+      0
+    ],
+    [
+      "first-blue",
+      1
+    ],
+    [
+      "first-blue",
+      2
+    ],
+    [
+      "first-blue",
+      3
+    ],
+    [
+      "trainer",
+      0
+    ],
+    [
+      "trainer",
+      1
+    ],
+    [
+      "trainer",
+      2
+    ],
+    [
+      "trainer",
+      3
+    ],
+    [
+      "wild",
+      0
+    ],
+    [
+      "wild",
+      1
+    ],
+    [
+      "wild",
+      2
+    ],
+    [
+      "wild",
+      3
+    ],
+    [
+      "wild-solo-control",
+      0
+    ],
+    [
+      "wild-solo-control",
+      1
+    ],
+    [
+      "wild-solo-control",
+      2
+    ],
+    [
+      "wild-solo-control",
+      3
+    ]
+  ],
+  "overworld_frames_checked": 33326
+}
