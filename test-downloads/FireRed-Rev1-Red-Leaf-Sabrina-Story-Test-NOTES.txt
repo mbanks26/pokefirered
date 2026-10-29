@@ -1,0 +1,55 @@
+FireRed Rev 1 - Red, Leaf and Sabrina story test build
+
+NEW STORY
+Leaf automatically approaches Red and Sabrina at their first arrival from Route 1.
+She knows both, shows exactly the Boulder and Cascade Badges, mentions Eevee,
+and leaves without battling. Sabrina's follower resumes afterward. The scene
+uses a persistent flag and does not need Oak's Parcel first.
+
+Mother, Oak, Blue, Brock, Misty, Erika and Giovanni receive selective context.
+Leaf has later conversations in Cerulean, Lavender and Saffron, including an
+on-screen Water Stone/Vaporeon moment after Saffron is liberated.
+
+Sabrina remains the official Saffron Gym Leader and battles Red herself.
+Red appears alone against her. Original Marsh Badge/TM04 rewards remain;
+Sabrina rejoins after victory. Loss, retry and save/load preserve her status.
+Ordinary battles keep the polished combined artwork and original Red throw.
+
+PASSED
+Rev 1 build; 18 source/graphics checks; actual fresh-game follower progression
+through Leaf's reunion, Parcel and Pokedex; wild/trainer/first Blue battles;
+35,707 overworld frames monitored for native overlap; cartridge Save/Continue
+before and after reunion; all four entrance columns and no-companion/female
+edge controls; later Leaf scenes; Sabrina loss/retry/victory and badge/TM04;
+cartridge Continue before/after Gym victory; unclaimed-TM claim control;
+combined art restored in a post-Gym wild battle.
+
+Later-map access, story prerequisites, gender edge and strong/weak Gym parties
+are diagnostic RAM fixtures in the emulator tests. They do not alter this ROM.
+This is not a complete natural playthrough of all eight Gyms/Rocket/League/Sevii.
+
+DEFERRED / MANUAL REVIEW
+Pikachu and guaranteed shiny starters are not implemented in this story phase.
+Original starter choices/shiny rules remain. Leaf's full battle team, friendly
+challenge and League-era meetings remain future work. The original female
+route stays available; expanded Leaf-family NPC scenes are limited to Red.
+Manic EMU still needs art, pacing, ball alignment, full-inventory TM handling,
+long-session and later-event checks. Existing follower surf/bike/cutscene hiding
+and safe ledge regrouping remain. Safari/tutorial/link/multi/genuine doubles
+are not covered by this regression.
+
+IPHONE TESTING
+Download/extract the ZIP in Files and import the .gba into Manic EMU.
+Keep your previous ROM and save. Use in-game Save/Continue instead of a
+save state from a different ROM build. Start a new Red game for all opening
+context; talk to Mother, join Sabrina, complete Oak/starter/Blue, then enter
+Viridian from Route 1. Watch Leaf depart, save/reload, revisit, and verify
+Sabrina follows through the Mart and Parcel delivery. Check her Gym normally
+later in the adventure. No manual source edits are needed.
+
+Source branch: feature/red-leaf-sabrina-story
+Source commit: 224228ba30b6e57d4d2458c1083de95aa3fe13ba
+Backup branch: backup/pre-leaf-story-2026-10-29
+ROM SHA-256: bf51a4de1547739f7448faf64c18fb76a72867b42c72e3888c63a10d31cfffcb
+The three prior test ROMs and source checkpoints are preserved.
+See REPORT.md for the seven new flags, trigger details and complete 36-file list.

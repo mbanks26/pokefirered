@@ -1,0 +1,126 @@
+{
+  "source_commit": "224228ba30b6e57d4d2458c1083de95aa3fe13ba",
+  "rom_sha256": "bf51a4de1547739f7448faf64c18fb76a72867b42c72e3888c63a10d31cfffcb",
+  "battle_regression": {
+    "rom_sha256": "bf51a4de1547739f7448faf64c18fb76a72867b42c72e3888c63a10d31cfffcb",
+    "captures": {
+      "first-blue": {
+        "sprite": 3,
+        "size": [
+          64,
+          64
+        ],
+        "flags": 28,
+        "images": 136542412,
+        "palette": 0
+      },
+      "wild": {
+        "sprite": 3,
+        "size": [
+          64,
+          64
+        ],
+        "flags": 4,
+        "images": 136542412,
+        "palette": 0
+      },
+      "wild-solo-control": {
+        "sprite": 3,
+        "size": [
+          64,
+          64
+        ],
+        "flags": 4,
+        "images": 136542372,
+        "palette": 0
+      },
+      "trainer": {
+        "sprite": 3,
+        "size": [
+          64,
+          64
+        ],
+        "flags": 12,
+        "images": 136542412,
+        "palette": 0
+      }
+    },
+    "throw_command_frames": [
+      [
+        "first-blue",
+        0
+      ],
+      [
+        "first-blue",
+        1
+      ],
+      [
+        "first-blue",
+        2
+      ],
+      [
+        "first-blue",
+        3
+      ],
+      [
+        "trainer",
+        0
+      ],
+      [
+        "trainer",
+        1
+      ],
+      [
+        "trainer",
+        2
+      ],
+      [
+        "trainer",
+        3
+      ],
+      [
+        "wild",
+        0
+      ],
+      [
+        "wild",
+        1
+      ],
+      [
+        "wild",
+        2
+      ],
+      [
+        "wild",
+        3
+      ],
+      [
+        "wild-solo-control",
+        0
+      ],
+      [
+        "wild-solo-control",
+        1
+      ],
+      [
+        "wild-solo-control",
+        2
+      ],
+      [
+        "wild-solo-control",
+        3
+      ]
+    ],
+    "overworld_frames_checked": 35707
+  },
+  "story_regression": {
+    "rom_sha256": "bf51a4de1547739f7448faf64c18fb76a72867b42c72e3888c63a10d31cfffcb",
+    "diagnostic_fixtures": true,
+    "post_gym_captures": [
+      "after-gym-wild-intro"
+    ],
+    "badge": true,
+    "tm04": true,
+    "reunion_persistent": true
+  }
+}

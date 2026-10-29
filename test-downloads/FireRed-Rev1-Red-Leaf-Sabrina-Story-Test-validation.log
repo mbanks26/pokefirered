@@ -1,0 +1,647 @@
+Build command: make -j5 GAME_VERSION=FIRERED GAME_REVISION=1 all syms
+tools/scaninc/scaninc -M build/firered_rev1/src/AgbRfu_LinkManager.d -I include -I tools/agbcc/include src/AgbRfu_LinkManager.c
+tools/scaninc/scaninc -M build/firered_rev1/src/agb_flash.d -I include -I tools/agbcc/include src/agb_flash.c
+tools/scaninc/scaninc -M build/firered_rev1/src/agb_flash_1m.d -I include -I tools/agbcc/include src/agb_flash_1m.c
+tools/scaninc/scaninc -M build/firered_rev1/src/agb_flash_le.d -I include -I tools/agbcc/include src/agb_flash_le.c
+tools/scaninc/scaninc -M build/firered_rev1/src/agb_flash_mx.d -I include -I tools/agbcc/include src/agb_flash_mx.c
+tools/scaninc/scaninc -M build/firered_rev1/src/bag.d -I include -I tools/agbcc/include src/bag.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_ai_script_commands.d -I include -I tools/agbcc/include src/battle_ai_script_commands.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_ai_switch_items.d -I include -I tools/agbcc/include src/battle_ai_switch_items.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim.d -I include -I tools/agbcc/include src/battle_anim.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_bug.d -I include -I tools/agbcc/include src/battle_anim_bug.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_dark.d -I include -I tools/agbcc/include src/battle_anim_dark.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_dragon.d -I include -I tools/agbcc/include src/battle_anim_dragon.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_effects_1.d -I include -I tools/agbcc/include src/battle_anim_effects_1.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_effects_2.d -I include -I tools/agbcc/include src/battle_anim_effects_2.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_effects_3.d -I include -I tools/agbcc/include src/battle_anim_effects_3.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_electric.d -I include -I tools/agbcc/include src/battle_anim_electric.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_fight.d -I include -I tools/agbcc/include src/battle_anim_fight.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_fire.d -I include -I tools/agbcc/include src/battle_anim_fire.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_flying.d -I include -I tools/agbcc/include src/battle_anim_flying.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_ghost.d -I include -I tools/agbcc/include src/battle_anim_ghost.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_ground.d -I include -I tools/agbcc/include src/battle_anim_ground.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_ice.d -I include -I tools/agbcc/include src/battle_anim_ice.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_mon_movement.d -I include -I tools/agbcc/include src/battle_anim_mon_movement.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_mons.d -I include -I tools/agbcc/include src/battle_anim_mons.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_normal.d -I include -I tools/agbcc/include src/battle_anim_normal.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_poison.d -I include -I tools/agbcc/include src/battle_anim_poison.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_psychic.d -I include -I tools/agbcc/include src/battle_anim_psychic.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_rock.d -I include -I tools/agbcc/include src/battle_anim_rock.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_smokescreen.d -I include -I tools/agbcc/include src/battle_anim_smokescreen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_sound_tasks.d -I include -I tools/agbcc/include src/battle_anim_sound_tasks.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_special.d -I include -I tools/agbcc/include src/battle_anim_special.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_status_effects.d -I include -I tools/agbcc/include src/battle_anim_status_effects.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_utility_funcs.d -I include -I tools/agbcc/include src/battle_anim_utility_funcs.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_anim_water.d -I include -I tools/agbcc/include src/battle_anim_water.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_bg.d -I include -I tools/agbcc/include src/battle_bg.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_link_opponent.d -I include -I tools/agbcc/include src/battle_controller_link_opponent.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_link_partner.d -I include -I tools/agbcc/include src/battle_controller_link_partner.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_oak_old_man.d -I include -I tools/agbcc/include src/battle_controller_oak_old_man.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_opponent.d -I include -I tools/agbcc/include src/battle_controller_opponent.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_player.d -I include -I tools/agbcc/include src/battle_controller_player.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_pokedude.d -I include -I tools/agbcc/include src/battle_controller_pokedude.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controller_safari.d -I include -I tools/agbcc/include src/battle_controller_safari.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_controllers.d -I include -I tools/agbcc/include src/battle_controllers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_gfx_sfx_util.d -I include -I tools/agbcc/include src/battle_gfx_sfx_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_interface.d -I include -I tools/agbcc/include src/battle_interface.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_intro.d -I include -I tools/agbcc/include src/battle_intro.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_main.d -I include -I tools/agbcc/include src/battle_main.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_message.d -I include -I tools/agbcc/include src/battle_message.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_records.d -I include -I tools/agbcc/include src/battle_records.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_script_commands.d -I include -I tools/agbcc/include src/battle_script_commands.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_setup.d -I include -I tools/agbcc/include src/battle_setup.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_tower.d -I include -I tools/agbcc/include src/battle_tower.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_transition.d -I include -I tools/agbcc/include src/battle_transition.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_util.d -I include -I tools/agbcc/include src/battle_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/battle_util2.d -I include -I tools/agbcc/include src/battle_util2.c
+tools/scaninc/scaninc -M build/firered_rev1/src/berry.d -I include -I tools/agbcc/include src/berry.c
+tools/scaninc/scaninc -M build/firered_rev1/src/berry_crush.d -I include -I tools/agbcc/include src/berry_crush.c
+tools/scaninc/scaninc -M build/firered_rev1/src/berry_fix_program.d -I include -I tools/agbcc/include src/berry_fix_program.c
+tools/scaninc/scaninc -M build/firered_rev1/src/berry_pouch.d -I include -I tools/agbcc/include src/berry_pouch.c
+tools/scaninc/scaninc -M build/firered_rev1/src/berry_powder.d -I include -I tools/agbcc/include src/berry_powder.c
+tools/scaninc/scaninc -M build/firered_rev1/src/bg.d -I include -I tools/agbcc/include src/bg.c
+tools/scaninc/scaninc -M build/firered_rev1/src/bg_regs.d -I include -I tools/agbcc/include src/bg_regs.c
+tools/scaninc/scaninc -M build/firered_rev1/src/bike.d -I include -I tools/agbcc/include src/bike.c
+tools/scaninc/scaninc -M build/firered_rev1/src/blend_palette.d -I include -I tools/agbcc/include src/blend_palette.c
+tools/scaninc/scaninc -M build/firered_rev1/src/blit.d -I include -I tools/agbcc/include src/blit.c
+tools/scaninc/scaninc -M build/firered_rev1/src/braille_text.d -I include -I tools/agbcc/include src/braille_text.c
+tools/scaninc/scaninc -M build/firered_rev1/src/buy_menu_helpers.d -I include -I tools/agbcc/include src/buy_menu_helpers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/cable_car_util.d -I include -I tools/agbcc/include src/cable_car_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/cable_club.d -I include -I tools/agbcc/include src/cable_club.c
+tools/scaninc/scaninc -M build/firered_rev1/src/cereader_tool.d -I include -I tools/agbcc/include src/cereader_tool.c
+tools/scaninc/scaninc -M build/firered_rev1/src/clear_save_data_screen.d -I include -I tools/agbcc/include src/clear_save_data_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/coins.d -I include -I tools/agbcc/include src/coins.c
+tools/scaninc/scaninc -M build/firered_rev1/src/coord_event_weather.d -I include -I tools/agbcc/include src/coord_event_weather.c
+tools/scaninc/scaninc -M build/firered_rev1/src/credits.d -I include -I tools/agbcc/include src/credits.c
+tools/scaninc/scaninc -M build/firered_rev1/src/data.d -I include -I tools/agbcc/include src/data.c
+tools/scaninc/scaninc -M build/firered_rev1/src/daycare.d -I include -I tools/agbcc/include src/daycare.c
+tools/scaninc/scaninc -M build/firered_rev1/src/decompress.d -I include -I tools/agbcc/include src/decompress.c
+tools/scaninc/scaninc -M build/firered_rev1/src/decoration.d -I include -I tools/agbcc/include src/decoration.c
+tools/scaninc/scaninc -M build/firered_rev1/src/digit_obj_util.d -I include -I tools/agbcc/include src/digit_obj_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/diploma.d -I include -I tools/agbcc/include src/diploma.c
+tools/scaninc/scaninc -M build/firered_rev1/src/dma3_manager.d -I include -I tools/agbcc/include src/dma3_manager.c
+tools/scaninc/scaninc -M build/firered_rev1/src/dodrio_berry_picking.d -I include -I tools/agbcc/include src/dodrio_berry_picking.c
+tools/scaninc/scaninc -M build/firered_rev1/src/dodrio_berry_picking_comm.d -I include -I tools/agbcc/include src/dodrio_berry_picking_comm.c
+tools/scaninc/scaninc -M build/firered_rev1/src/dynamic_placeholder_text_util.d -I include -I tools/agbcc/include src/dynamic_placeholder_text_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/easy_chat.d -I include -I tools/agbcc/include src/easy_chat.c
+tools/scaninc/scaninc -M build/firered_rev1/src/easy_chat_2.d -I include -I tools/agbcc/include src/easy_chat_2.c
+tools/scaninc/scaninc -M build/firered_rev1/src/easy_chat_3.d -I include -I tools/agbcc/include src/easy_chat_3.c
+tools/scaninc/scaninc -M build/firered_rev1/src/ereader_helpers.d -I include -I tools/agbcc/include src/ereader_helpers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/ereader_screen.d -I include -I tools/agbcc/include src/ereader_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/event_data.d -I include -I tools/agbcc/include src/event_data.c
+tools/scaninc/scaninc -M build/firered_rev1/src/event_object_lock.d -I include -I tools/agbcc/include src/event_object_lock.c
+tools/scaninc/scaninc -M build/firered_rev1/src/event_object_movement.d -I include -I tools/agbcc/include src/event_object_movement.c
+tools/scaninc/scaninc -M build/firered_rev1/src/evolution_graphics.d -I include -I tools/agbcc/include src/evolution_graphics.c
+tools/scaninc/scaninc -M build/firered_rev1/src/evolution_scene.d -I include -I tools/agbcc/include src/evolution_scene.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fame_checker.d -I include -I tools/agbcc/include src/fame_checker.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_camera.d -I include -I tools/agbcc/include src/field_camera.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_control_avatar.d -I include -I tools/agbcc/include src/field_control_avatar.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_door.d -I include -I tools/agbcc/include src/field_door.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_effect.d -I include -I tools/agbcc/include src/field_effect.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_effect_helpers.d -I include -I tools/agbcc/include src/field_effect_helpers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_fadetransition.d -I include -I tools/agbcc/include src/field_fadetransition.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_message_box.d -I include -I tools/agbcc/include src/field_message_box.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_player_avatar.d -I include -I tools/agbcc/include src/field_player_avatar.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_poison.d -I include -I tools/agbcc/include src/field_poison.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_screen_effect.d -I include -I tools/agbcc/include src/field_screen_effect.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_special_scene.d -I include -I tools/agbcc/include src/field_special_scene.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_specials.d -I include -I tools/agbcc/include src/field_specials.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_tasks.d -I include -I tools/agbcc/include src/field_tasks.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_weather.d -I include -I tools/agbcc/include src/field_weather.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_weather_effects.d -I include -I tools/agbcc/include src/field_weather_effects.c
+tools/scaninc/scaninc -M build/firered_rev1/src/field_weather_util.d -I include -I tools/agbcc/include src/field_weather_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fieldmap.d -I include -I tools/agbcc/include src/fieldmap.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_cut.d -I include -I tools/agbcc/include src/fldeff_cut.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_dig.d -I include -I tools/agbcc/include src/fldeff_dig.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_flash.d -I include -I tools/agbcc/include src/fldeff_flash.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_poison.d -I include -I tools/agbcc/include src/fldeff_poison.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_rocksmash.d -I include -I tools/agbcc/include src/fldeff_rocksmash.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_softboiled.d -I include -I tools/agbcc/include src/fldeff_softboiled.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_strength.d -I include -I tools/agbcc/include src/fldeff_strength.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_sweetscent.d -I include -I tools/agbcc/include src/fldeff_sweetscent.c
+tools/scaninc/scaninc -M build/firered_rev1/src/fldeff_teleport.d -I include -I tools/agbcc/include src/fldeff_teleport.c
+tools/scaninc/scaninc -M build/firered_rev1/src/gpu_regs.d -I include -I tools/agbcc/include src/gpu_regs.c
+tools/scaninc/scaninc -M build/firered_rev1/src/graphics.d -I include -I tools/agbcc/include src/graphics.c
+tools/scaninc/scaninc -M build/firered_rev1/src/hall_of_fame.d -I include -I tools/agbcc/include src/hall_of_fame.c
+tools/scaninc/scaninc -M build/firered_rev1/src/heal_location.d -I include -I tools/agbcc/include src/heal_location.c
+tools/scaninc/scaninc -M build/firered_rev1/src/help_message.d -I include -I tools/agbcc/include src/help_message.c
+tools/scaninc/scaninc -M build/firered_rev1/src/help_system.d -I include -I tools/agbcc/include src/help_system.c
+tools/scaninc/scaninc -M build/firered_rev1/src/help_system_util.d -I include -I tools/agbcc/include src/help_system_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/hof_pc.d -I include -I tools/agbcc/include src/hof_pc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/image_processing_effects.d -I include -I tools/agbcc/include src/image_processing_effects.c
+tools/scaninc/scaninc -M build/firered_rev1/src/intro.d -I include -I tools/agbcc/include src/intro.c
+tools/scaninc/scaninc -M build/firered_rev1/src/isagbprn.d -I include -I tools/agbcc/include src/isagbprn.c
+tools/scaninc/scaninc -M build/firered_rev1/src/item.d -I include -I tools/agbcc/include src/item.c
+tools/scaninc/scaninc -M build/firered_rev1/src/item_menu.d -I include -I tools/agbcc/include src/item_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/item_menu_icons.d -I include -I tools/agbcc/include src/item_menu_icons.c
+tools/scaninc/scaninc -M build/firered_rev1/src/item_pc.d -I include -I tools/agbcc/include src/item_pc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/item_use.d -I include -I tools/agbcc/include src/item_use.c
+tools/scaninc/scaninc -M build/firered_rev1/src/itemfinder.d -I include -I tools/agbcc/include src/itemfinder.c
+tools/scaninc/scaninc -M build/firered_rev1/src/keyboard_text.d -I include -I tools/agbcc/include src/keyboard_text.c
+tools/scaninc/scaninc -M build/firered_rev1/src/learn_move.d -I include -I tools/agbcc/include src/learn_move.c
+tools/scaninc/scaninc -M build/firered_rev1/src/librfu_intr.d -I include -I tools/agbcc/include src/librfu_intr.c
+tools/scaninc/scaninc -M build/firered_rev1/src/librfu_rfu.d -I include -I tools/agbcc/include src/librfu_rfu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/librfu_sio32id.d -I include -I tools/agbcc/include src/librfu_sio32id.c
+tools/scaninc/scaninc -M build/firered_rev1/src/librfu_stwi.d -I include -I tools/agbcc/include src/librfu_stwi.c
+tools/scaninc/scaninc -M build/firered_rev1/src/link.d -I include -I tools/agbcc/include src/link.c
+tools/scaninc/scaninc -M build/firered_rev1/src/link_rfu_2.d -I include -I tools/agbcc/include src/link_rfu_2.c
+tools/scaninc/scaninc -M build/firered_rev1/src/link_rfu_3.d -I include -I tools/agbcc/include src/link_rfu_3.c
+tools/scaninc/scaninc -M build/firered_rev1/src/list_menu.d -I include -I tools/agbcc/include src/list_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/load_save.d -I include -I tools/agbcc/include src/load_save.c
+tools/scaninc/scaninc -M build/firered_rev1/src/m4a.d -I include -I tools/agbcc/include src/m4a.c
+tools/scaninc/scaninc -M build/firered_rev1/src/m4a_tables.d -I include -I tools/agbcc/include src/m4a_tables.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mail.d -I include -I tools/agbcc/include src/mail.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mail_data.d -I include -I tools/agbcc/include src/mail_data.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mailbox_pc.d -I include -I tools/agbcc/include src/mailbox_pc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/main.d -I include -I tools/agbcc/include src/main.c
+tools/scaninc/scaninc -M build/firered_rev1/src/main_menu.d -I include -I tools/agbcc/include src/main_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/malloc.d -I include -I tools/agbcc/include src/malloc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/map_name_popup.d -I include -I tools/agbcc/include src/map_name_popup.c
+tools/scaninc/scaninc -M build/firered_rev1/src/map_preview_screen.d -I include -I tools/agbcc/include src/map_preview_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/math_util.d -I include -I tools/agbcc/include src/math_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/menu.d -I include -I tools/agbcc/include src/menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/menu2.d -I include -I tools/agbcc/include src/menu2.c
+tools/scaninc/scaninc -M build/firered_rev1/src/menu_helpers.d -I include -I tools/agbcc/include src/menu_helpers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/menu_indicators.d -I include -I tools/agbcc/include src/menu_indicators.c
+tools/scaninc/scaninc -M build/firered_rev1/src/metatile_behavior.d -I include -I tools/agbcc/include src/metatile_behavior.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mini_printf.d -I include -I tools/agbcc/include src/mini_printf.c
+tools/scaninc/scaninc -M build/firered_rev1/src/minigame_countdown.d -I include -I tools/agbcc/include src/minigame_countdown.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mon_markings.d -I include -I tools/agbcc/include src/mon_markings.c
+tools/scaninc/scaninc -M build/firered_rev1/src/money.d -I include -I tools/agbcc/include src/money.c
+tools/scaninc/scaninc -M build/firered_rev1/src/move_descriptions.d -I include -I tools/agbcc/include src/move_descriptions.c
+tools/scaninc/scaninc -M build/firered_rev1/src/multiboot.d -I include -I tools/agbcc/include src/multiboot.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_event_msg.d -I include -I tools/agbcc/include src/mystery_event_msg.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_event_script.d -I include -I tools/agbcc/include src/mystery_event_script.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift.d -I include -I tools/agbcc/include src/mystery_gift.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_client.d -I include -I tools/agbcc/include src/mystery_gift_client.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_link.d -I include -I tools/agbcc/include src/mystery_gift_link.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_menu.d -I include -I tools/agbcc/include src/mystery_gift_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_scripts.d -I include -I tools/agbcc/include src/mystery_gift_scripts.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_server.d -I include -I tools/agbcc/include src/mystery_gift_server.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_show_card.d -I include -I tools/agbcc/include src/mystery_gift_show_card.c
+tools/scaninc/scaninc -M build/firered_rev1/src/mystery_gift_show_news.d -I include -I tools/agbcc/include src/mystery_gift_show_news.c
+tools/scaninc/scaninc -M build/firered_rev1/src/naming_screen.d -I include -I tools/agbcc/include src/naming_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/new_game.d -I include -I tools/agbcc/include src/new_game.c
+tools/scaninc/scaninc -M build/firered_rev1/src/new_menu_helpers.d -I include -I tools/agbcc/include src/new_menu_helpers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/oak_speech.d -I include -I tools/agbcc/include src/oak_speech.c
+tools/scaninc/scaninc -M build/firered_rev1/src/option_menu.d -I include -I tools/agbcc/include src/option_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/overworld.d -I include -I tools/agbcc/include src/overworld.c
+tools/scaninc/scaninc -M build/firered_rev1/src/palette.d -I include -I tools/agbcc/include src/palette.c
+tools/scaninc/scaninc -M build/firered_rev1/src/palette_util.d -I include -I tools/agbcc/include src/palette_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/party_menu.d -I include -I tools/agbcc/include src/party_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/party_menu_specials.d -I include -I tools/agbcc/include src/party_menu_specials.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pc_screen_effect.d -I include -I tools/agbcc/include src/pc_screen_effect.c
+tools/scaninc/scaninc -M build/firered_rev1/src/play_time.d -I include -I tools/agbcc/include src/play_time.c
+tools/scaninc/scaninc -M build/firered_rev1/src/player_pc.d -I include -I tools/agbcc/include src/player_pc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokeball.d -I include -I tools/agbcc/include src/pokeball.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokedex.d -I include -I tools/agbcc/include src/pokedex.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokedex_area_markers.d -I include -I tools/agbcc/include src/pokedex_area_markers.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokedex_screen.d -I include -I tools/agbcc/include src/pokedex_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon.d -I include -I tools/agbcc/include src/pokemon.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_icon.d -I include -I tools/agbcc/include src/pokemon_icon.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_jump.d -I include -I tools/agbcc/include src/pokemon_jump.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_size_record.d -I include -I tools/agbcc/include src/pokemon_size_record.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_special_anim.d -I include -I tools/agbcc/include src/pokemon_special_anim.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_special_anim_scene.d -I include -I tools/agbcc/include src/pokemon_special_anim_scene.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system.d -I include -I tools/agbcc/include src/pokemon_storage_system.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system_data.d -I include -I tools/agbcc/include src/pokemon_storage_system_data.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system_graphics.d -I include -I tools/agbcc/include src/pokemon_storage_system_graphics.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system_menu.d -I include -I tools/agbcc/include src/pokemon_storage_system_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system_misc.d -I include -I tools/agbcc/include src/pokemon_storage_system_misc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_storage_system_tasks.d -I include -I tools/agbcc/include src/pokemon_storage_system_tasks.c
+tools/scaninc/scaninc -M build/firered_rev1/src/pokemon_summary_screen.d -I include -I tools/agbcc/include src/pokemon_summary_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/post_battle_event_funcs.d -I include -I tools/agbcc/include src/post_battle_event_funcs.c
+tools/scaninc/scaninc -M build/firered_rev1/src/prof_pc.d -I include -I tools/agbcc/include src/prof_pc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/quest_log.d -I include -I tools/agbcc/include src/quest_log.c
+tools/scaninc/scaninc -M build/firered_rev1/src/quest_log_battle.d -I include -I tools/agbcc/include src/quest_log_battle.c
+tools/scaninc/scaninc -M build/firered_rev1/src/quest_log_events.d -I include -I tools/agbcc/include src/quest_log_events.c
+tools/scaninc/scaninc -M build/firered_rev1/src/quest_log_objects.d -I include -I tools/agbcc/include src/quest_log_objects.c
+tools/scaninc/scaninc -M build/firered_rev1/src/quest_log_player.d -I include -I tools/agbcc/include src/quest_log_player.c
+tools/scaninc/scaninc -M build/firered_rev1/src/random.d -I include -I tools/agbcc/include src/random.c
+tools/scaninc/scaninc -M build/firered_rev1/src/region_map.d -I include -I tools/agbcc/include src/region_map.c
+tools/scaninc/scaninc -M build/firered_rev1/src/renewable_hidden_items.d -I include -I tools/agbcc/include src/renewable_hidden_items.c
+tools/scaninc/scaninc -M build/firered_rev1/src/reset_save_heap.d -I include -I tools/agbcc/include src/reset_save_heap.c
+tools/scaninc/scaninc -M build/firered_rev1/src/reshow_battle_screen.d -I include -I tools/agbcc/include src/reshow_battle_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/roamer.d -I include -I tools/agbcc/include src/roamer.c
+tools/scaninc/scaninc -M build/firered_rev1/src/rom_header_gf.d -I include -I tools/agbcc/include src/rom_header_gf.c
+tools/scaninc/scaninc -M build/firered_rev1/src/sabrina_follower.d -I include -I tools/agbcc/include src/sabrina_follower.c
+tools/scaninc/scaninc -M build/firered_rev1/src/safari_zone.d -I include -I tools/agbcc/include src/safari_zone.c
+tools/scaninc/scaninc -M build/firered_rev1/src/save.d -I include -I tools/agbcc/include src/save.c
+tools/scaninc/scaninc -M build/firered_rev1/src/save_failed_screen.d -I include -I tools/agbcc/include src/save_failed_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/save_location.d -I include -I tools/agbcc/include src/save_location.c
+tools/scaninc/scaninc -M build/firered_rev1/src/save_menu_util.d -I include -I tools/agbcc/include src/save_menu_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/scanline_effect.d -I include -I tools/agbcc/include src/scanline_effect.c
+tools/scaninc/scaninc -M build/firered_rev1/src/scrcmd.d -I include -I tools/agbcc/include src/scrcmd.c
+tools/scaninc/scaninc -M build/firered_rev1/src/script.d -I include -I tools/agbcc/include src/script.c
+tools/scaninc/scaninc -M build/firered_rev1/src/script_menu.d -I include -I tools/agbcc/include src/script_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/script_movement.d -I include -I tools/agbcc/include src/script_movement.c
+tools/scaninc/scaninc -M build/firered_rev1/src/script_pokemon_util.d -I include -I tools/agbcc/include src/script_pokemon_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/seagallop.d -I include -I tools/agbcc/include src/seagallop.c
+tools/scaninc/scaninc -M build/firered_rev1/src/shop.d -I include -I tools/agbcc/include src/shop.c
+tools/scaninc/scaninc -M build/firered_rev1/src/sloopsvc.d -I include -I tools/agbcc/include src/sloopsvc.c
+tools/scaninc/scaninc -M build/firered_rev1/src/slot_machine.d -I include -I tools/agbcc/include src/slot_machine.c
+tools/scaninc/scaninc -M build/firered_rev1/src/sound.d -I include -I tools/agbcc/include src/sound.c
+tools/scaninc/scaninc -M build/firered_rev1/src/special_field_anim.d -I include -I tools/agbcc/include src/special_field_anim.c
+tools/scaninc/scaninc -M build/firered_rev1/src/sprite.d -I include -I tools/agbcc/include src/sprite.c
+tools/scaninc/scaninc -M build/firered_rev1/src/ss_anne.d -I include -I tools/agbcc/include src/ss_anne.c
+tools/scaninc/scaninc -M build/firered_rev1/src/start_menu.d -I include -I tools/agbcc/include src/start_menu.c
+tools/scaninc/scaninc -M build/firered_rev1/src/string_util.d -I include -I tools/agbcc/include src/string_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/strings.d -I include -I tools/agbcc/include src/strings.c
+tools/scaninc/scaninc -M build/firered_rev1/src/task.d -I include -I tools/agbcc/include src/task.c
+tools/scaninc/scaninc -M build/firered_rev1/src/teachy_tv.d -I include -I tools/agbcc/include src/teachy_tv.c
+tools/scaninc/scaninc -M build/firered_rev1/src/text.d -I include -I tools/agbcc/include src/text.c
+tools/scaninc/scaninc -M build/firered_rev1/src/text_printer.d -I include -I tools/agbcc/include src/text_printer.c
+tools/scaninc/scaninc -M build/firered_rev1/src/text_window.d -I include -I tools/agbcc/include src/text_window.c
+tools/scaninc/scaninc -M build/firered_rev1/src/text_window_graphics.d -I include -I tools/agbcc/include src/text_window_graphics.c
+tools/scaninc/scaninc -M build/firered_rev1/src/tilemap_util.d -I include -I tools/agbcc/include src/tilemap_util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/tileset_anims.d -I include -I tools/agbcc/include src/tileset_anims.c
+tools/scaninc/scaninc -M build/firered_rev1/src/tilesets.d -I include -I tools/agbcc/include src/tilesets.c
+tools/scaninc/scaninc -M build/firered_rev1/src/title_screen.d -I include -I tools/agbcc/include src/title_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/tm_case.d -I include -I tools/agbcc/include src/tm_case.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trade.d -I include -I tools/agbcc/include src/trade.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trade_scene.d -I include -I tools/agbcc/include src/trade_scene.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_card.d -I include -I tools/agbcc/include src/trainer_card.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_fan_club.d -I include -I tools/agbcc/include src/trainer_fan_club.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_pokemon_sprites.d -I include -I tools/agbcc/include src/trainer_pokemon_sprites.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_see.d -I include -I tools/agbcc/include src/trainer_see.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_tower.d -I include -I tools/agbcc/include src/trainer_tower.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trainer_tower_sets.d -I include -I tools/agbcc/include src/trainer_tower_sets.c
+tools/scaninc/scaninc -M build/firered_rev1/src/trig.d -I include -I tools/agbcc/include src/trig.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room.d -I include -I tools/agbcc/include src/union_room.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_battle.d -I include -I tools/agbcc/include src/union_room_battle.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_chat.d -I include -I tools/agbcc/include src/union_room_chat.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_chat_display.d -I include -I tools/agbcc/include src/union_room_chat_display.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_chat_objects.d -I include -I tools/agbcc/include src/union_room_chat_objects.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_message.d -I include -I tools/agbcc/include src/union_room_message.c
+tools/scaninc/scaninc -M build/firered_rev1/src/union_room_player_avatar.d -I include -I tools/agbcc/include src/union_room_player_avatar.c
+tools/scaninc/scaninc -M build/firered_rev1/src/util.d -I include -I tools/agbcc/include src/util.c
+tools/scaninc/scaninc -M build/firered_rev1/src/vs_seeker.d -I include -I tools/agbcc/include src/vs_seeker.c
+tools/scaninc/scaninc -M build/firered_rev1/src/wild_encounter.d -I include -I tools/agbcc/include src/wild_encounter.c
+tools/scaninc/scaninc -M build/firered_rev1/src/wild_pokemon_area.d -I include -I tools/agbcc/include src/wild_pokemon_area.c
+tools/scaninc/scaninc -M build/firered_rev1/src/window.d -I include -I tools/agbcc/include src/window.c
+tools/scaninc/scaninc -M build/firered_rev1/src/window_8bpp.d -I include -I tools/agbcc/include src/window_8bpp.c
+tools/scaninc/scaninc -M build/firered_rev1/src/wireless_communication_status_screen.d -I include -I tools/agbcc/include src/wireless_communication_status_screen.c
+tools/scaninc/scaninc -M build/firered_rev1/src/wonder_news.d -I include -I tools/agbcc/include src/wonder_news.c
+tools/scaninc/scaninc -M build/firered_rev1/data/event_scripts.d -I include -I "" data/event_scripts.s
+tools/scaninc/scaninc -M build/firered_rev1/data/mystery_event_msg.d -I include -I "" data/mystery_event_msg.s
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/AgbRfu_LinkManager.o src/AgbRfu_LinkManager.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/agb_flash.o src/agb_flash.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/agb_flash_1m.o src/agb_flash_1m.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/agb_flash_le.o src/agb_flash_le.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/agb_flash_mx.o src/agb_flash_mx.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/bag.o src/bag.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_ai_script_commands.o src/battle_ai_script_commands.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_ai_switch_items.o src/battle_ai_switch_items.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim.o src/battle_anim.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_bug.o src/battle_anim_bug.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_dark.o src/battle_anim_dark.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_dragon.o src/battle_anim_dragon.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_effects_1.o src/battle_anim_effects_1.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_effects_2.o src/battle_anim_effects_2.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_effects_3.o src/battle_anim_effects_3.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_electric.o src/battle_anim_electric.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_fight.o src/battle_anim_fight.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_fire.o src/battle_anim_fire.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_flying.o src/battle_anim_flying.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_ghost.o src/battle_anim_ghost.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_ground.o src/battle_anim_ground.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_ice.o src/battle_anim_ice.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_mons.o src/battle_anim_mons.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_mon_movement.o src/battle_anim_mon_movement.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_normal.o src/battle_anim_normal.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_poison.o src/battle_anim_poison.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_psychic.o src/battle_anim_psychic.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_rock.o src/battle_anim_rock.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_smokescreen.o src/battle_anim_smokescreen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_sound_tasks.o src/battle_anim_sound_tasks.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_special.o src/battle_anim_special.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_status_effects.o src/battle_anim_status_effects.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_utility_funcs.o src/battle_anim_utility_funcs.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_anim_water.o src/battle_anim_water.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_bg.o src/battle_bg.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_link_opponent.o src/battle_controller_link_opponent.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_link_partner.o src/battle_controller_link_partner.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_oak_old_man.o src/battle_controller_oak_old_man.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_opponent.o src/battle_controller_opponent.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_player.o src/battle_controller_player.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_pokedude.o src/battle_controller_pokedude.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controller_safari.o src/battle_controller_safari.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_controllers.o src/battle_controllers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_gfx_sfx_util.o src/battle_gfx_sfx_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_interface.o src/battle_interface.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_intro.o src/battle_intro.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_main.o src/battle_main.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_message.o src/battle_message.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_records.o src/battle_records.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_script_commands.o src/battle_script_commands.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_setup.o src/battle_setup.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_tower.o src/battle_tower.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_transition.o src/battle_transition.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_util.o src/battle_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/battle_util2.o src/battle_util2.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/berry.o src/berry.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/berry_crush.o src/berry_crush.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/berry_fix_program.o src/berry_fix_program.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/berry_pouch.o src/berry_pouch.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/berry_powder.o src/berry_powder.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/bg.o src/bg.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/bg_regs.o src/bg_regs.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/bike.o src/bike.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/blend_palette.o src/blend_palette.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/braille_text.o src/braille_text.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/blit.o src/blit.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/buy_menu_helpers.o src/buy_menu_helpers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/cable_car_util.o src/cable_car_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/cable_club.o src/cable_club.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/cereader_tool.o src/cereader_tool.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/clear_save_data_screen.o src/clear_save_data_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/coins.o src/coins.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/coord_event_weather.o src/coord_event_weather.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/credits.o src/credits.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/data.o src/data.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/daycare.o src/daycare.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/decompress.o src/decompress.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/decoration.o src/decoration.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/digit_obj_util.o src/digit_obj_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/diploma.o src/diploma.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/dma3_manager.o src/dma3_manager.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/dodrio_berry_picking.o src/dodrio_berry_picking.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/dodrio_berry_picking_comm.o src/dodrio_berry_picking_comm.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/dynamic_placeholder_text_util.o src/dynamic_placeholder_text_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/easy_chat.o src/easy_chat.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/easy_chat_2.o src/easy_chat_2.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/easy_chat_3.o src/easy_chat_3.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/ereader_helpers.o src/ereader_helpers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/ereader_screen.o src/ereader_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/event_data.o src/event_data.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/event_object_lock.o src/event_object_lock.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/evolution_graphics.o src/evolution_graphics.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/event_object_movement.o src/event_object_movement.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/evolution_scene.o src/evolution_scene.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fame_checker.o src/fame_checker.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_camera.o src/field_camera.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_control_avatar.o src/field_control_avatar.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_door.o src/field_door.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_effect.o src/field_effect.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_effect_helpers.o src/field_effect_helpers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_fadetransition.o src/field_fadetransition.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_message_box.o src/field_message_box.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_player_avatar.o src/field_player_avatar.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_poison.o src/field_poison.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_screen_effect.o src/field_screen_effect.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_special_scene.o src/field_special_scene.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_specials.o src/field_specials.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_tasks.o src/field_tasks.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_weather.o src/field_weather.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_weather_effects.o src/field_weather_effects.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/field_weather_util.o src/field_weather_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fieldmap.o src/fieldmap.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_cut.o src/fldeff_cut.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_dig.o src/fldeff_dig.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_flash.o src/fldeff_flash.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_poison.o src/fldeff_poison.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_rocksmash.o src/fldeff_rocksmash.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_softboiled.o src/fldeff_softboiled.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_strength.o src/fldeff_strength.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_sweetscent.o src/fldeff_sweetscent.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/gpu_regs.o src/gpu_regs.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/fldeff_teleport.o src/fldeff_teleport.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/graphics.o src/graphics.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/hall_of_fame.o src/hall_of_fame.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/heal_location.o src/heal_location.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/help_message.o src/help_message.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/help_system.o src/help_system.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/help_system_util.o src/help_system_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/hof_pc.o src/hof_pc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/image_processing_effects.o src/image_processing_effects.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/intro.o src/intro.c
+tools/agbcc/bin/old_agbcc <flags> -o build/firered_rev1/src/isagbprn.o src/isagbprn.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/item.o src/item.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/item_menu.o src/item_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/item_menu_icons.o src/item_menu_icons.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/item_pc.o src/item_pc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/item_use.o src/item_use.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/itemfinder.o src/itemfinder.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/keyboard_text.o src/keyboard_text.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/learn_move.o src/learn_move.c
+tools/agbcc/bin/agbcc_arm <flags> -o build/firered_rev1/src/librfu_intr.o src/librfu_intr.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/librfu_rfu.o src/librfu_rfu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/librfu_sio32id.o src/librfu_sio32id.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/librfu_stwi.o src/librfu_stwi.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/link.o src/link.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/link_rfu_2.o src/link_rfu_2.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/link_rfu_3.o src/link_rfu_3.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/list_menu.o src/list_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/load_save.o src/load_save.c
+tools/agbcc/bin/old_agbcc <flags> -o build/firered_rev1/src/m4a.o src/m4a.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/m4a_tables.o src/m4a_tables.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mail.o src/mail.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mail_data.o src/mail_data.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mailbox_pc.o src/mailbox_pc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/main.o src/main.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/main_menu.o src/main_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/malloc.o src/malloc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/map_name_popup.o src/map_name_popup.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/map_preview_screen.o src/map_preview_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/math_util.o src/math_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/menu.o src/menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/menu2.o src/menu2.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/menu_helpers.o src/menu_helpers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/menu_indicators.o src/menu_indicators.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/metatile_behavior.o src/metatile_behavior.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mini_printf.o src/mini_printf.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/minigame_countdown.o src/minigame_countdown.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mon_markings.o src/mon_markings.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/money.o src/money.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/move_descriptions.o src/move_descriptions.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/multiboot.o src/multiboot.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_event_msg.o src/mystery_event_msg.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_event_script.o src/mystery_event_script.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift.o src/mystery_gift.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_client.o src/mystery_gift_client.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_link.o src/mystery_gift_link.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_menu.o src/mystery_gift_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_scripts.o src/mystery_gift_scripts.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_server.o src/mystery_gift_server.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_show_card.o src/mystery_gift_show_card.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/mystery_gift_show_news.o src/mystery_gift_show_news.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/naming_screen.o src/naming_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/new_game.o src/new_game.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/new_menu_helpers.o src/new_menu_helpers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/oak_speech.o src/oak_speech.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/option_menu.o src/option_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/overworld.o src/overworld.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/palette.o src/palette.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/palette_util.o src/palette_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/party_menu.o src/party_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/party_menu_specials.o src/party_menu_specials.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pc_screen_effect.o src/pc_screen_effect.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/play_time.o src/play_time.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/player_pc.o src/player_pc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokeball.o src/pokeball.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokedex.o src/pokedex.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokedex_area_markers.o src/pokedex_area_markers.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokedex_screen.o src/pokedex_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon.o src/pokemon.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_icon.o src/pokemon_icon.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_jump.o src/pokemon_jump.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_size_record.o src/pokemon_size_record.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_special_anim.o src/pokemon_special_anim.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_special_anim_scene.o src/pokemon_special_anim_scene.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system.o src/pokemon_storage_system.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system_data.o src/pokemon_storage_system_data.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system_graphics.o src/pokemon_storage_system_graphics.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system_menu.o src/pokemon_storage_system_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system_misc.o src/pokemon_storage_system_misc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_storage_system_tasks.o src/pokemon_storage_system_tasks.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/pokemon_summary_screen.o src/pokemon_summary_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/post_battle_event_funcs.o src/post_battle_event_funcs.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/prof_pc.o src/prof_pc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/quest_log.o src/quest_log.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/quest_log_battle.o src/quest_log_battle.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/quest_log_events.o src/quest_log_events.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/quest_log_objects.o src/quest_log_objects.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/quest_log_player.o src/quest_log_player.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/random.o src/random.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/region_map.o src/region_map.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/renewable_hidden_items.o src/renewable_hidden_items.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/reset_save_heap.o src/reset_save_heap.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/reshow_battle_screen.o src/reshow_battle_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/roamer.o src/roamer.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/rom_header_gf.o src/rom_header_gf.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/sabrina_follower.o src/sabrina_follower.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/safari_zone.o src/safari_zone.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/save.o src/save.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/save_failed_screen.o src/save_failed_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/save_location.o src/save_location.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/save_menu_util.o src/save_menu_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/scanline_effect.o src/scanline_effect.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/scrcmd.o src/scrcmd.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/script.o src/script.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/script_menu.o src/script_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/script_movement.o src/script_movement.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/seagallop.o src/seagallop.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/script_pokemon_util.o src/script_pokemon_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/shop.o src/shop.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/sloopsvc.o src/sloopsvc.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/slot_machine.o src/slot_machine.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/sound.o src/sound.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/special_field_anim.o src/special_field_anim.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/sprite.o src/sprite.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/ss_anne.o src/ss_anne.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/start_menu.o src/start_menu.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/string_util.o src/string_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/strings.o src/strings.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/task.o src/task.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/teachy_tv.o src/teachy_tv.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/text.o src/text.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/text_printer.o src/text_printer.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/text_window.o src/text_window.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/text_window_graphics.o src/text_window_graphics.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/tilemap_util.o src/tilemap_util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/tileset_anims.o src/tileset_anims.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/tilesets.o src/tilesets.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/title_screen.o src/title_screen.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/tm_case.o src/tm_case.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trade.o src/trade.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trade_scene.o src/trade_scene.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_card.o src/trainer_card.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_fan_club.o src/trainer_fan_club.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_pokemon_sprites.o src/trainer_pokemon_sprites.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_see.o src/trainer_see.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_tower.o src/trainer_tower.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trainer_tower_sets.o src/trainer_tower_sets.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/trig.o src/trig.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room.o src/union_room.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_battle.o src/union_room_battle.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_chat.o src/union_room_chat.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_chat_display.o src/union_room_chat_display.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_chat_objects.o src/union_room_chat_objects.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_message.o src/union_room_message.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/union_room_player_avatar.o src/union_room_player_avatar.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/util.o src/util.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/vs_seeker.o src/vs_seeker.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/wild_encounter.o src/wild_encounter.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/wild_pokemon_area.o src/wild_pokemon_area.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/window.o src/window.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/window_8bpp.o src/window_8bpp.c
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/wireless_communication_status_screen.o src/wireless_communication_status_screen.c
+tools/preproc/preproc data/event_scripts.s charmap.txt | cc -E -I include - | tools/preproc/preproc -ie data/event_scripts.s charmap.txt | arm-none-eabi-as -mcpu=arm7tdmi --defsym FIRERED=1 --defsym REVISION=1 --defsym ENGLISH=1 --defsym MODERN=0 -o build/firered_rev1/data/event_scripts.o
+tools/agbcc/bin/agbcc <flags> -o build/firered_rev1/src/wonder_news.o src/wonder_news.c
+tools/preproc/preproc data/mystery_event_msg.s charmap.txt | cc -E -I include - | tools/preproc/preproc -ie data/mystery_event_msg.s charmap.txt | arm-none-eabi-as -mcpu=arm7tdmi --defsym FIRERED=1 --defsym REVISION=1 --defsym ENGLISH=1 --defsym MODERN=0 -o build/firered_rev1/data/mystery_event_msg.o
+tools/ramscrgen/ramscrgen COMMON sym_common.txt ENGLISH -c build/firered_rev1/src,common_syms > build/firered_rev1/sym_common.ld
+Memory region         Used Size  Region Size  %age Used
+           EWRAM:      261116 B       256 KB     99.61%
+           IWRAM:       29824 B        32 KB     91.02%
+             ROM:    15417176 B        32 MB     45.95%
+cd build/firered_rev1 && arm-none-eabi-ld -Map ../../pokefirered_rev1.map -T ../../ld_script.ld --print-memory-usage -o ../../pokefirered_rev1.elf <objs> <libs> | cat
+tools/gbafix/gbafix pokefirered_rev1.elf -t"POKEMON FIRE" -cBPRE -m01 -r1 --silent
+arm-none-eabi-objcopy -O binary --gap-fill 0xFF --pad-to 0x9000000 pokefirered_rev1.elf pokefirered_rev1.gba
+arm-none-eabi-objdump -t pokefirered_rev1.elf | sort -u | grep -E "^0[2389]" | perl -p -e 's/^(\w{8}) (\w).{6} \S+\t(\w{8}) (\S+)$/\1 \2 \3 \4/g' > pokefirered_rev1.sym
+
+
+test_mothers_twin_dialogue_is_in_the_assembled_rom (__main__.BuiltRomTests.test_mothers_twin_dialogue_is_in_the_assembled_rom) ... ok
+test_revision_one_and_gba_header_checksum (__main__.BuiltRomTests.test_revision_one_and_gba_header_checksum) ... ok
+test_new_companion_text_fits_real_message_box_with_letter_spacing (__main__.DialogueFitTests.test_new_companion_text_fits_real_message_box_with_letter_spacing) ... ok
+test_active_flag_persistent_and_unused_in_baseline (__main__.EventIntegrationTests.test_active_flag_persistent_and_unused_in_baseline) ... ok
+test_follower_does_not_mutate_party_or_unrelated_flags (__main__.EventIntegrationTests.test_follower_does_not_mutate_party_or_unrelated_flags) ... ok
+test_join_event_and_new_references_resolve (__main__.EventIntegrationTests.test_join_event_and_new_references_resolve) ... ok
+test_reserved_dynamic_id_not_consumed_by_map_template (__main__.EventIntegrationTests.test_reserved_dynamic_id_not_consumed_by_map_template) ... ok
+test_special_appended_without_changing_old_indices (__main__.EventIntegrationTests.test_special_appended_without_changing_old_indices) ... ok
+test_stationary_maps_only_change_sabrina_hide_flag (__main__.EventIntegrationTests.test_stationary_maps_only_change_sabrina_hide_flag) ... ok
+test_story_flags_use_previously_unused_persistent_bits (__main__.EventIntegrationTests.test_story_flags_use_previously_unused_persistent_bits) ... ok
+test_all_37_original_shared_dialogue_blocks_preserved (__main__.PreservationTests.test_all_37_original_shared_dialogue_blocks_preserved) ... ok
+test_gym_battle_rewards_and_original_dialogue_preserved (__main__.PreservationTests.test_gym_battle_rewards_and_original_dialogue_preserved) ... ok
+test_oak_blue_starter_and_pokedex_progression_unchanged (__main__.PreservationTests.test_oak_blue_starter_and_pokedex_progression_unchanged) ... ok
+test_twin_canon_and_original_female_selection (__main__.PreservationTests.test_twin_canon_and_original_female_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.972s
+
+OK
+test_five_frames_palette_and_every_original_red_pixel (__main__.CombinedBackSpriteTests.test_five_frames_palette_and_every_original_red_pixel) ... ok
+test_one_64x64_frame_uses_only_2048_bytes (__main__.CombinedBackSpriteTests.test_one_64x64_frame_uses_only_2048_bytes) ... ok
+test_original_assets_and_throw_animation_preserved (__main__.CombinedBackSpriteTests.test_original_assets_and_throw_animation_preserved) ... ok
+test_previous_follower_rom_is_untouched (__main__.CombinedBackSpriteTests.test_previous_follower_rom_is_untouched) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.236s
+
+OK
+
+
+PASS: fresh game, original Oak introduction, house exit, Sabrina activation before starter.
+PASS: four directions, corners, stopping, and one-tile trail in actual engine frames.
+PASS: companion conversation returns control without losing follower.
+PASS: emulator state restoration retains follower (in-game save/reload still separate).
+PASS: natural building entry/exit recreates exactly one follower.
+PASS: original Oak grass interception and laboratory introduction with visible follower.
+PASS: Oak starter selection, one-mon party, Blue selects his counter, companion retained.
+PASS: actual combined intro first-blue
+PASS: original first rival battle completes with two battlers; Sabrina never enters party/battle.
+PASS: real in-game save completed; cartridge SRAM written for cold-boot continuation check.
+PASS: cold boot from actual cartridge save restores companion after Quest Log replay.
+PASS (debug-assisted prerequisites): running keeps Sabrina on Red’s trail.
+PASS: automatic Viridian twin reunion before Parcel; two-badge scene completes and Leaf departs.
+PASS (debug-assisted Repel): walk Pallet → Route 1 → Viridian; no duplicate Sabrina.
+PASS: actual Route 1 ledge jump safely regroups Sabrina beside Red.
+PASS: original Oak parcel delivery, Blue scene, and Pokédex award complete with Sabrina retained.
+PASS (diagnostic native-movement setup): Sabrina yields before native overlap and restores.
+PASS: actual combined intro wild
+PASS: ordinary wild battle completes with one trainer, two battlers, and companion restoration.
+PASS: original solo intro wild-solo-control
+PASS (diagnostic join-flag control): unaccompanied Red retains original graphics.
+PASS: actual combined intro trainer
+PASS: ordinary trainer encounter completes without double/multi mechanics.
+PASS: battle throw animation observed, native overlap monitored across 35707 overworld frames.
+
+
+PASS: actual Save/cold-boot Continue after reunion; southern reentry does not repeat it.
+PASS (diagnostic reset): all four south-entry columns, badge reveal, Red/Leaf separate palettes, and follower recovery before Pokédex.
+PASS (diagnostic missing-companion edge): no-join entry is safe; returning with Sabrina runs the reunion.
+PASS (diagnostic gender edge): female route does not create a second Leaf or run the twin-brother scene.
+PASS (diagnostic story prerequisites): Cerulean reunion, Lavender seriousness, Saffron support and one-time on-screen Water Stone/Vaporeon moment; no forced Leaf battle.
+PASS (diagnostic weak party): losing Sabrina battle uses solo Red, blackouts safely and retains companion status.
+PASS (diagnostic strong party): cartridge Continue/retry, solo Gym introduction, original Marsh Badge/TM04 rewards and exactly one restored follower.
+PASS (diagnostic unclaimed-TM flag): restored Gym companion preserves the TM04 claim path.
+PASS: post-victory Save/Continue retains one Sabrina; ordinary wild intro restores combined artwork.
