@@ -46,8 +46,8 @@
 // Sabrina joins through her first Pallet Town conversation. This is a persistent
 // flag outside the temporary range; it also hides her stationary map copies.
 #define FLAG_SABRINA_FOLLOWER_ACTIVE 0x020
-#define FLAG_0x021               0x021
-#define FLAG_0x022               0x022
+#define FLAG_LEAF_VIRIDIAN_REUNION 0x021
+#define FLAG_HIDE_VIRIDIAN_LEAF    0x022
 #define FLAG_0x023               0x023
 #define FLAG_0x024               0x024
 #define FLAG_0x025               0x025

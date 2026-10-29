@@ -48,6 +48,7 @@ static EWRAM_DATA struct
     u8 count;
     bool8 ready;
     bool8 talking;
+    bool8 leafScene;
 } sFollower = {0};
 
 // Some engine helpers look up a map template even for special objects. This
@@ -261,6 +262,37 @@ void StartSabrinaFollower(void)
     UpdateSabrinaFollower();
 }
 
+// Only the Viridian reunion owns the follower while this short script runs.
+// The joined flag is never cleared, and normal control/map changes recover it.
+void StageSabrinaForLeafScene(void)
+{
+    struct ObjectEvent *player = &gObjectEvents[gPlayerAvatar.objectEventId];
+    s16 x = player->currentCoords.x + 1;
+    s16 y = player->currentCoords.y;
+    u8 id;
+
+    RemoveFollowerObjects();
+    if (!FlagGet(FLAG_SABRINA_FOLLOWER_ACTIVE))
+        return;
+    if (!IsSafeSpawnTile(x, y, player))
+        x = player->currentCoords.x - 1;
+    if (!IsSafeSpawnTile(x, y, player))
+        return;
+    id = SpawnSpecialObjectEventParameterized(OBJ_EVENT_GFX_SABRINA, MOVEMENT_TYPE_NONE,
+        LOCALID_SABRINA_FOLLOWER, x, y, player->currentElevation);
+    if (id < OBJECT_EVENTS_COUNT)
+    {
+        ObjectEventTurn(&gObjectEvents[id], DIR_NORTH);
+        sFollower.leafScene = TRUE;
+    }
+}
+
+void EndSabrinaLeafScene(void)
+{
+    sFollower.leafScene = FALSE;
+    RemoveFollowerObjects();
+}
+
 void UpdateSabrinaFollower(void)
 {
     struct ObjectEvent *player;
@@ -275,6 +307,14 @@ void UpdateSabrinaFollower(void)
     player = &gObjectEvents[gPlayerAvatar.objectEventId];
     if (!player->active || !player->isPlayer)
         return;
+    if (sFollower.leafScene)
+    {
+        if (ArePlayerFieldControlsLocked() && !QL_IS_PLAYBACK_STATE
+            && gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_VIRIDIAN_CITY)
+            && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_VIRIDIAN_CITY))
+            return;
+        EndSabrinaLeafScene();
+    }
     if (!ArePlayerFieldControlsLocked())
         sFollower.talking = FALSE;
     if (ShouldSuppressFollower(player))

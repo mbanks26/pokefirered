@@ -125,6 +125,9 @@ class EventIntegrationTests(unittest.TestCase):
         hidden = []
         for path in sorted((ROOT / "data/maps").glob("*/map.json")):
             current = json.loads(path.read_text())
+            # New Leaf NPCs append to the protected native/Sabrina templates.
+            current["object_events"] = [obj for obj in current["object_events"]
+                                        if obj.get("graphics_id") != "OBJ_EVENT_GFX_LEAF_NPC"]
             copies = [obj for obj in current["object_events"]
                       if obj.get("graphics_id") == "OBJ_EVENT_GFX_SABRINA"]
             if not copies or path.parent.name == "SaffronCity_Gym":
@@ -181,7 +184,8 @@ class EventIntegrationTests(unittest.TestCase):
         special_names = lambda source: re.findall(r"^\s*def_special\s+(\w+)", source, re.M)
         old = special_names(baseline("data/specials.inc"))
         current = special_names(read("data/specials.inc"))
-        self.assertEqual(current, old + ["StartSabrinaFollower"])
+        self.assertEqual(current[:len(old)], old)
+        self.assertEqual(current[len(old):], ["StartSabrinaFollower", "StageSabrinaForLeafScene", "EndSabrinaLeafScene"])
         self.assertEqual(current.count("StartSabrinaFollower"), 1)
 
     def test_follower_does_not_mutate_party_or_unrelated_flags(self):

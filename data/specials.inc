@@ -453,4 +453,6 @@ gSpecials::
 	def_special LoopWingFlapSound
 	def_special CreateEnemyEventMon
 	def_special StartSabrinaFollower
+	def_special StageSabrinaForLeafScene
+	def_special EndSabrinaLeafScene
 gSpecialsEnd::

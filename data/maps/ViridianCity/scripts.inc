@@ -1,14 +1,26 @@
 ViridianCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ViridianCity_OnFrame
 	.byte 0
 
+ViridianCity_OnFrame::
+	map_script_2 VAR_TEMP_F, 0, Leaf_EventScript_ViridianReunion
+	.2byte 0
+
 ViridianCity_OnTransition::
+	setflag FLAG_HIDE_VIRIDIAN_LEAF
+	setvar VAR_TEMP_F, 0
+	call_if_set FLAG_LEAF_VIRIDIAN_REUNION, Leaf_EventScript_DisableViridianTrigger
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_CITY
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_SetOldManStandingByRoad
 	call_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_SetOldManNormal
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 0, ViridianCity_EventScript_TryUnlockGym
 	end
+
+Leaf_EventScript_DisableViridianTrigger::
+	setvar VAR_TEMP_F, 1
+	return
 
 ViridianCity_EventScript_SetOldManNormal::
 	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1

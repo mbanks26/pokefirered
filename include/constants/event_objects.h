@@ -156,7 +156,9 @@
 #define OBJ_EVENT_GFX_DEOXYS_N 150
 #define OBJ_EVENT_GFX_SS_ANNE 151
 
-#define NUM_OBJ_EVENT_GFX     152
+// Leaf NPC reuses the heroine's graphics in a separate NPC palette slot.
+#define OBJ_EVENT_GFX_LEAF_NPC 152
+#define NUM_OBJ_EVENT_GFX      153
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

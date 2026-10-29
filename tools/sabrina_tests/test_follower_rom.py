@@ -338,6 +338,15 @@ def main():
         game.step('up')
         game.emu.run(100)
         assert game.map() == (3, 1), ('Viridian connection', game.map(), game.player())
+        if 'Leaf_EventScript_ViridianReunion' in game.symbols:
+            assert game.emu.u8(game.symbols['sLockFieldControls']), 'Leaf did not greet Red automatically'
+            assert not game.flag(0x021), 'reunion marked complete before goodbye'
+            assert any(o['graphics'] == 152 for o in game.objects()), 'Leaf NPC missing'
+            game.emu.screenshot(args.output / '14-leaf-reunion.png')
+            game.finish_script(limit=1000)
+            assert game.flag(0x021), 'Leaf reunion did not finish'
+            assert not any(o['graphics'] == 152 for o in game.objects()), 'Leaf did not depart'
+            print('PASS: automatic Viridian twin reunion before Parcel; two-badge scene completes and Leaf departs.')
         assert game.follower() is not None
         game.emu.screenshot(args.output / '14-viridian.png')
         print('PASS (debug-assisted Repel): walk Pallet → Route 1 → Viridian; no duplicate Sabrina.')
