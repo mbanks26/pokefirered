@@ -1,7 +1,41 @@
 SaffronCity_Gym_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, SaffronCity_Gym_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, SaffronCity_Gym_OnFrame
 	.byte 0
 
+SaffronCity_Gym_OnTransition::
+	clearflag FLAG_HIDE_GYM_SABRINA
+	setvar VAR_TEMP_F, 1
+	goto_if_unset FLAG_SABRINA_FOLLOWER_ACTIVE, EventScript_EndGymSetup
+	call_if_set FLAG_BADGE06_GET, Sabrina_EventScript_HideGymLeader
+	goto_if_set FLAG_BADGE06_GET, EventScript_EndGymSetup
+	goto_if_set FLAG_SABRINA_GYM_DUTY_INTRO, EventScript_EndGymSetup
+	checkplayergender
+	goto_if_ne VAR_RESULT, MALE, EventScript_EndGymSetup
+	setvar VAR_TEMP_F, 0
+EventScript_EndGymSetup::
+	end
+
+SaffronCity_Gym_OnFrame::
+	map_script_2 VAR_TEMP_F, 0, Sabrina_EventScript_GymDuty
+	.2byte 0
+
+Sabrina_EventScript_HideGymLeader::
+	setflag FLAG_HIDE_GYM_SABRINA
+	return
+
+Sabrina_EventScript_GymDuty::
+	lockall
+	setvar VAR_TEMP_F, 1
+	msgbox Family_Text_SabrinaGymDuty
+	setflag FLAG_SABRINA_GYM_DUTY_INTRO
+	releaseall
+	end
+
 SaffronCity_Gym_EventScript_Sabrina::
+	lock
+	faceplayer
+	call Family_EventScript_SabrinaGymChallenge
 	famechecker FAMECHECKER_SABRINA, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_SABRINA, SaffronCity_Gym_Text_SabrinaIntro, SaffronCity_Gym_Text_SabrinaDefeat, SaffronCity_Gym_EventScript_DefeatedSabrina, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM04_FROM_SABRINA, SaffronCity_Gym_EventScript_GiveTM04
@@ -44,13 +78,23 @@ SaffronCity_Gym_EventScript_GiveTM04::
 	giveitem_msg SaffronCity_Gym_Text_ReceivedTM04FromSabrina, ITEM_TM04
 	setflag FLAG_GOT_TM04_FROM_SABRINA
 	msgbox SaffronCity_Gym_Text_SabrinaPostBattle
+	call Sabrina_EventScript_RejoinAfterGym
 	release
 	end
 
 SaffronCity_Gym_EventScript_NoRoomForTM04::
 	msgbox SaffronCity_Gym_Text_BagFullOfOtherItems
+	call Sabrina_EventScript_RejoinAfterGym
 	release
 	end
+
+Sabrina_EventScript_RejoinAfterGym::
+	goto_if_unset FLAG_SABRINA_FOLLOWER_ACTIVE, EventScript_Return
+	msgbox Family_Text_SabrinaGymRejoin
+	setflag FLAG_HIDE_GYM_SABRINA
+	removeobject LOCALID_SAFFRON_GYM_SABRINA
+	special StartSabrinaFollower
+	return
 
 SaffronCity_Gym_EventScript_Johan::
 	trainerbattle_single TRAINER_PSYCHIC_JOHAN, SaffronCity_Gym_Text_JohanIntro, SaffronCity_Gym_Text_JohanDefeat

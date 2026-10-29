@@ -2795,7 +2795,12 @@ void SetMultiuseSpriteTemplateToTrainerBack(u16 trainerSpriteId, u8 battlerPosit
         && !(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_LINK_IN_BATTLE | BATTLE_TYPE_MULTI
             | BATTLE_TYPE_SAFARI | BATTLE_TYPE_OLD_MAN_TUTORIAL | BATTLE_TYPE_POKEDUDE))
         && FlagGet(FLAG_SABRINA_FOLLOWER_ACTIVE))
-        trainerSpriteId = TRAINER_BACK_PIC_RED_SABRINA;
+    {
+        // She is the opposing Gym Leader for this challenge, never both sides.
+        if (!(gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+            || gTrainerBattleOpponent_A != TRAINER_LEADER_SABRINA)
+            trainerSpriteId = TRAINER_BACK_PIC_RED_SABRINA;
+    }
 
     gMultiuseSpriteTemplate.paletteTag = trainerSpriteId;
     if (battlerPosition == B_POSITION_PLAYER_LEFT || battlerPosition == B_POSITION_PLAYER_RIGHT)

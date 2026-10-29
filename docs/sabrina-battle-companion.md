@@ -1,5 +1,9 @@
 # Sabrina's battle companion and NPC overlap fix
 
+This records the initial battle-companion checkpoint. For current Leaf events,
+Sabrina's personal Gym battle and its solo-Red exception, see the
+[story integration report](red-leaf-sabrina-story.md).
+
 Development branch: `feature/sabrina-battle-companion`.
 Protected starting checkpoint: `62c94ca0a4d3625f28f22d5bda0d0ed0cb8b3096`, also
 saved as `backup/pre-sabrina-battle-companion-2026-10-28`.

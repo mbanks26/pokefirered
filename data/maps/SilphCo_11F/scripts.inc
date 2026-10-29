@@ -61,6 +61,7 @@ SilphCo_11F_EventScript_BattleGiovanni::
 	waitmovement 0
 	delay 25
 	msgbox SilphCo_11F_Text_GiovanniIntro
+	call Family_EventScript_Giovanni
 	closemessage
 	call_if_eq VAR_TEMP_1, 0, SilphCo_11F_EventScript_GiovanniApproachLeft
 	call_if_eq VAR_TEMP_1, 1, SilphCo_11F_EventScript_GiovanniApproachRight

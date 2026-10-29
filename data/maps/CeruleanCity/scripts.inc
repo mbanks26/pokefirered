@@ -3,6 +3,7 @@ CeruleanCity_MapScripts::
 	.byte 0
 
 CeruleanCity_OnTransition::
+	call Leaf_EventScript_SetCeruleanVisibility
 	setworldmapflag FLAG_WORLD_MAP_CERULEAN_CITY
 	call_if_unset FLAG_GOT_SS_TICKET, CeruleanCity_EventScript_BlockExits
 	end

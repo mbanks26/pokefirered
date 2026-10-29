@@ -2,6 +2,9 @@ PewterCity_Gym_MapScripts::
 	.byte 0
 
 PewterCity_Gym_EventScript_Brock::
+	lock
+	faceplayer
+	call Family_EventScript_Brock
 	famechecker FAMECHECKER_BROCK, FCPICKSTATE_COLORED, UpdatePickStateFromSpecialVar8005
 	trainerbattle_single TRAINER_LEADER_BROCK, PewterCity_Gym_Text_BrockIntro, PewterCity_Gym_Text_BrockDefeat, PewterCity_Gym_EventScript_DefeatedBrock, NO_MUSIC
 	goto_if_unset FLAG_GOT_TM39_FROM_BROCK, PewterCity_Gym_EventScript_GiveTM39

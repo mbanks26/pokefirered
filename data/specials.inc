@@ -455,4 +455,5 @@ gSpecials::
 	def_special StartSabrinaFollower
 	def_special StageSabrinaForLeafScene
 	def_special EndSabrinaLeafScene
+	def_special HoldSabrinaForConversation
 gSpecialsEnd::

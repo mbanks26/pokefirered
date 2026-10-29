@@ -61,3 +61,98 @@ Leaf_Movement_Depart::
 	walk_up
 	walk_up
 	step_end
+
+@ Each town recomputes visibility on entry, including older cartridge saves.
+Leaf_EventScript_SetCeruleanVisibility::
+	setflag FLAG_HIDE_LATER_LEAF
+	goto_if_unset FLAG_LEAF_VIRIDIAN_REUNION, EventScript_Return
+	goto_if_set FLAG_LEAF_LEFT_CERULEAN, EventScript_Return
+	checkplayergender
+	goto_if_ne VAR_RESULT, MALE, EventScript_Return
+	clearflag FLAG_HIDE_LATER_LEAF
+	return
+
+Leaf_EventScript_SetLavenderVisibility::
+	setflag FLAG_HIDE_LATER_LEAF
+	goto_if_unset FLAG_LEAF_VIRIDIAN_REUNION, EventScript_Return
+	goto_if_set FLAG_LEAF_EEVEE_EVOLVED, EventScript_Return
+	checkplayergender
+	goto_if_ne VAR_RESULT, MALE, EventScript_Return
+	clearflag FLAG_HIDE_LATER_LEAF
+	return
+
+Leaf_EventScript_SetSaffronVisibility::
+	setflag FLAG_HIDE_LATER_LEAF
+	goto_if_unset FLAG_LEAF_VIRIDIAN_REUNION, EventScript_Return
+	goto_if_unset FLAG_RESCUED_MR_FUJI, EventScript_Return
+	checkplayergender
+	goto_if_ne VAR_RESULT, MALE, EventScript_Return
+	clearflag FLAG_HIDE_LATER_LEAF
+	return
+
+Leaf_EventScript_Cerulean::
+	lock
+	faceplayer
+	special HoldSabrinaForConversation
+	textcolor NPC_TEXT_COLOR_FEMALE
+	msgbox Leaf_Text_Cerulean
+	msgbox Leaf_Text_CeruleanSabrina
+	release
+	end
+
+Leaf_EventScript_Lavender::
+	lock
+	faceplayer
+	special HoldSabrinaForConversation
+	textcolor NPC_TEXT_COLOR_FEMALE
+	setflag FLAG_LEAF_LEFT_CERULEAN
+	goto_if_set FLAG_RESCUED_MR_FUJI, Leaf_EventScript_LavenderSafe
+	msgbox Leaf_Text_Lavender
+	msgbox Leaf_Text_LavenderSabrina
+	release
+	end
+
+Leaf_EventScript_LavenderSafe::
+	msgbox Leaf_Text_LavenderSafe
+	release
+	end
+
+Leaf_EventScript_Saffron::
+	setflag FLAG_LEAF_LEFT_CERULEAN
+	lock
+	faceplayer
+	special HoldSabrinaForConversation
+	textcolor NPC_TEXT_COLOR_FEMALE
+	goto_if_set FLAG_LEAF_EEVEE_EVOLVED, Leaf_EventScript_SaffronVaporeon
+	goto_if_set FLAG_HIDE_SAFFRON_ROCKETS, Leaf_EventScript_EeveeEvolution
+	msgbox Leaf_Text_SaffronRockets
+	msgbox Leaf_Text_SaffronSabrina
+	release
+	end
+
+Leaf_EventScript_EeveeEvolution::
+	msgbox Leaf_Text_WaterStone
+	closemessage
+	showmonpic SPECIES_EEVEE, 10, 3
+	playmoncry SPECIES_EEVEE, 0
+	msgbox Leaf_Text_EeveeChoice
+	closemessage
+	waitmoncry
+	hidemonpic
+	delay 30
+	showmonpic SPECIES_VAPOREON, 10, 3
+	playfanfare MUS_LEVEL_UP
+	playmoncry SPECIES_VAPOREON, 0
+	msgbox Leaf_Text_Vaporeon
+	closemessage
+	waitfanfare
+	waitmoncry
+	hidemonpic
+	setflag FLAG_LEAF_EEVEE_EVOLVED
+	release
+	end
+
+Leaf_EventScript_SaffronVaporeon::
+	msgbox Leaf_Text_SaffronVaporeon
+	release
+	end

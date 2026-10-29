@@ -1012,6 +1012,7 @@ Text_MoveCanOnlyBeLearnedOnce::
 
 EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_VIRIDIAN_LEAF
+	setflag FLAG_HIDE_LATER_LEAF
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
 	setflag FLAG_HIDE_BILL_HUMAN_SEA_COTTAGE
@@ -1161,6 +1162,8 @@ EventScript_SetEnteringCyclingRoad::
 	.include "data/text/sabrina.inc"
 	.include "data/scripts/leaf_story.inc"
 	.include "data/text/leaf_story.inc"
+	.include "data/scripts/family_story.inc"
+	.include "data/text/family_story.inc"
 
 EventScript_GetElevatorFloor::
 	special GetElevatorFloor

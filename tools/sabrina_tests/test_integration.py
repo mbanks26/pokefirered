@@ -46,7 +46,7 @@ def constants(names: list[str], header: str) -> dict[str, int]:
     result = {}
     for name, value in zip(names, values):
         # Only integer expressions emitted from the constants header are allowed.
-        if not re.fullmatch(r"[-0-9a-fA-FxX()+ \t]+", value):
+        if not re.fullmatch(r"[-0-9a-fA-FxX()+ \t<>|&]+", value):
             raise AssertionError(f"Unresolved constant {name}: {value}")
         result[name] = eval(value, {"__builtins__": {}})
     return result
@@ -80,12 +80,23 @@ class PreservationTests(unittest.TestCase):
                 self.assertEqual(current[label].rstrip(), block.rstrip())
         self.assertGreaterEqual(len(current), 45)
 
-    def test_gym_battle_rewards_and_dialogue_unchanged(self):
-        for path in ("data/maps/SaffronCity_Gym/scripts.inc",
-                     "data/maps/SaffronCity_Gym/text.inc",
-                     "data/maps/SaffronCity_Gym/map.json"):
-            with self.subTest(path=path):
-                self.assertEqual(read(path), baseline(path))
+    def test_gym_battle_rewards_and_original_dialogue_preserved(self):
+        path = "data/maps/SaffronCity_Gym/scripts.inc"
+        old, new = baseline(path), read(path)
+        # These are the actual native badge/TM reward paths, with one added
+        # companion-restoration call after the final message in either path.
+        for label in ("SaffronCity_Gym_EventScript_DefeatedSabrina",
+                      "SaffronCity_Gym_EventScript_GiveTM04",
+                      "SaffronCity_Gym_EventScript_NoRoomForTM04"):
+            block = lambda text: text.split(label + "::\n", 1)[1].split("\n\n", 1)[0]
+            self.assertEqual(block(new).replace("\tcall Sabrina_EventScript_RejoinAfterGym\n", ""), block(old))
+        path = "data/maps/SaffronCity_Gym/text.inc"
+        self.assertEqual(read(path), baseline(path))
+        path = "data/maps/SaffronCity_Gym/map.json"
+        current = json.loads(read(path))
+        current["object_events"][6].pop("local_id")
+        current["object_events"][6]["flag"] = "0"
+        self.assertEqual(current, json.loads(baseline(path)))
 
     def test_oak_blue_starter_and_pokedex_progression_unchanged(self):
         for path in ("data/maps/PalletTown/scripts.inc",
@@ -93,7 +104,10 @@ class PreservationTests(unittest.TestCase):
                      "src/new_game.c", "src/battle_setup.c", "include/global.h",
                      "include/global.fieldmap.h"):
             with self.subTest(path=path):
-                self.assertEqual(read(path), baseline(path))
+                # Oak/Blue gain dialogue calls; their original event commands
+                # and starter/battle/progression paths must otherwise be exact.
+                source = re.sub(r"^\tcall Family_EventScript_\w+\n", "", read(path), flags=re.M)
+                self.assertEqual(source, baseline(path))
 
     def test_twin_canon_and_original_female_selection(self):
         path = "data/maps/PalletTown_PlayersHouse_1F/text.inc"
@@ -108,6 +122,19 @@ class PreservationTests(unittest.TestCase):
 
 
 class EventIntegrationTests(unittest.TestCase):
+    def test_story_flags_use_previously_unused_persistent_bits(self):
+        names = ["FLAG_LEAF_VIRIDIAN_REUNION", "FLAG_HIDE_VIRIDIAN_LEAF",
+                 "FLAG_HIDE_GYM_SABRINA", "FLAG_SABRINA_GYM_DUTY_INTRO",
+                 "FLAG_HIDE_LATER_LEAF", "FLAG_LEAF_LEFT_CERULEAN", "FLAG_LEAF_EEVEE_EVOLVED"]
+        values = constants(names, "constants/flags.h")
+        self.assertEqual(list(values.values()), list(range(0x21,0x28)))
+        for value in values.values():
+            alias = "FLAG_0x%03X" % value
+            references = subprocess.check_output(["git", "grep", "-n", alias, BASELINE],
+                                                 cwd=ROOT,text=True).splitlines()
+            self.assertEqual(len(references),1,(alias,references))
+            self.assertIn("include/constants/flags.h:", references[0])
+
     def test_active_flag_persistent_and_unused_in_baseline(self):
         values = constants(["FLAG_SABRINA_FOLLOWER_ACTIVE", "TEMP_FLAGS_END"],
                            "constants/flags.h")
@@ -185,7 +212,7 @@ class EventIntegrationTests(unittest.TestCase):
         old = special_names(baseline("data/specials.inc"))
         current = special_names(read("data/specials.inc"))
         self.assertEqual(current[:len(old)], old)
-        self.assertEqual(current[len(old):], ["StartSabrinaFollower", "StageSabrinaForLeafScene", "EndSabrinaLeafScene"])
+        self.assertEqual(current[len(old):], ["StartSabrinaFollower", "StageSabrinaForLeafScene", "EndSabrinaLeafScene", "HoldSabrinaForConversation"])
         self.assertEqual(current.count("StartSabrinaFollower"), 1)
 
     def test_follower_does_not_mutate_party_or_unrelated_flags(self):
@@ -200,6 +227,8 @@ class DialogueFitTests(unittest.TestCase):
     def test_new_companion_text_fits_real_message_box_with_letter_spacing(self):
         previous = text_blocks(baseline("data/text/sabrina.inc"))
         current = text_blocks(read("data/text/sabrina.inc"))
+        current.update(text_blocks(read("data/text/leaf_story.inc")))
+        current.update(text_blocks(read("data/text/family_story.inc")))
         mapping = charmap()
         font_source = read("src/text.c")
         fonts = {}
@@ -216,7 +245,7 @@ class DialogueFitTests(unittest.TestCase):
             self.assertTrue(text.endswith("$"), label)
             self.assertEqual(text.count("$"), 1, label)
             # The longest player name has seven characters; W is a wide letter.
-            text = text[:-1].replace("{PLAYER}", "W" * 7)
+            text = text[:-1].replace("{PLAYER}", "W" * 7).replace("{RIVAL}", "W" * 7)
             self.assertNotRegex(text, r"\{[^}]+\}", label)
             for page in text.split(r"\p"):
                 lines = page.split(r"\n")

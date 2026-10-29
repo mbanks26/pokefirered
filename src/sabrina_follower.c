@@ -31,6 +31,10 @@ extern const u8 Sabrina_EventScript_SaffronCity[];
 extern const u8 Sabrina_EventScript_CinnabarIsland[];
 extern const u8 Sabrina_EventScript_IndigoPlateau_PokemonCenter_1F[];
 extern const u8 Sabrina_EventScript_OneIsland[];
+extern const u8 SaffronCity_Gym_EventScript_GiveTM04[];
+extern const u8 SaffronCity_Gym_EventScript_SabrinaAfterBlaine[];
+extern const u8 SaffronCity_Gym_EventScript_SabrinaAfterGiovanni[];
+extern const u8 SaffronCity_Gym_EventScript_SabrinaChampion[];
 
 struct FollowerStep
 {
@@ -75,6 +79,21 @@ const struct ObjectEventTemplate *GetSabrinaFollowerTemplate(void)
 const u8 *GetSabrinaFollowerScript(void)
 {
     sFollower.talking = TRUE;
+    // Preserve unclaimed TM04 and the existing Gym milestone conversations
+    // after the official leader object becomes the traveling companion.
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_GYM)
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_GYM)
+        && FlagGet(FLAG_BADGE06_GET))
+    {
+        if (!FlagGet(FLAG_GOT_TM04_FROM_SABRINA))
+            return SaffronCity_Gym_EventScript_GiveTM04;
+        if (FlagGet(FLAG_SYS_GAME_CLEAR))
+            return SaffronCity_Gym_EventScript_SabrinaChampion;
+        if (FlagGet(FLAG_BADGE08_GET))
+            return SaffronCity_Gym_EventScript_SabrinaAfterGiovanni;
+        if (FlagGet(FLAG_BADGE07_GET))
+            return SaffronCity_Gym_EventScript_SabrinaAfterBlaine;
+    }
     // Town interiors share the town's dialogue. Routes use companion dialogue.
     // Never return the Gym battle script from a traveling conversation.
     switch (gMapHeader.regionMapSectionId)
@@ -135,8 +154,9 @@ static bool8 ShouldSuppressFollower(struct ObjectEvent *player)
         || QL_IS_PLAYBACK_STATE || InUnionRoom() || IsUpdateLinkStateCBActive())
         return TRUE;
     if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAP_SAFFRON_CITY_GYM)
-        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_GYM))
-        return TRUE; // Preserve the original leader/badge/TM event without a duplicate.
+        && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAP_SAFFRON_CITY_GYM)
+        && !FlagGet(FLAG_BADGE06_GET))
+        return TRUE; // The leader is on duty until Red earns her badge.
     if (gPlayerAvatar.flags & (PLAYER_AVATAR_FLAG_MACH_BIKE | PLAYER_AVATAR_FLAG_ACRO_BIKE
         | PLAYER_AVATAR_FLAG_SURFING | PLAYER_AVATAR_FLAG_UNDERWATER))
         return TRUE;
@@ -260,6 +280,11 @@ void StartSabrinaFollower(void)
     RemoveStationaryCopies();
     RemoveFollowerObjects();
     UpdateSabrinaFollower();
+}
+
+void HoldSabrinaForConversation(void)
+{
+    sFollower.talking = TRUE;
 }
 
 // Only the Viridian reunion owns the follower while this short script runs.

@@ -16,6 +16,7 @@ PalletTown_PlayersHouse_1F_EventScript_Mom::
 
 PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouMale::
 	msgbox PalletTown_PlayersHouse_1F_Text_AllBoysLeaveOakLookingForYou
+	call Family_EventScript_MomBeforeJourney
 	return
 
 PalletTown_PlayersHouse_1F_EventScript_MomOakLookingForYouFemale::
@@ -27,6 +28,7 @@ PalletTown_PlayersHouse_1F_EventScript_MomHeal::
 	closemessage
 	call EventScript_OutOfCenterPartyHeal
 	msgbox PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare
+	call Family_EventScript_MomMilestone
 	release
 	end
 

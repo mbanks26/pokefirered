@@ -65,9 +65,9 @@ starter, badge, item, Pokédex, or party slot.
 
 All 12 non-Gym stationary Sabrina objects use the active flag as their hide
 flag. Their coordinates, object IDs, scripts, and other map events are preserved.
-The original Saffron Gym Sabrina remains for the existing challenge. The follower
-engine must suppress its dynamic object there; replacing the challenge with a
-substitute trainer is a later feature.
+The original Saffron Gym Sabrina remains the opposing leader. The follower is
+suppressed before victory and resumes afterward; the current story plan has no
+substitute. See [the story integration report](red-leaf-sabrina-story.md).
 
 The engine selects the existing location-specific dialogue when possible.
 `Sabrina_EventScript_Companion` provides route and interior conversations before
@@ -108,7 +108,8 @@ This is a conservative first implementation with explicit limitations:
 - Sabrina does not animate opening doors herself. She is recreated safely in
   the destination, and may appear beside Red if the tile behind him is blocked.
 - The original Gym leader object is retained and the follower is suppressed
-  inside Saffron Gym, until the future substitute-trainer feature is implemented.
+  inside Saffron Gym before victory. The story integration restores the follower
+  afterward and uses solo Red artwork specifically against Sabrina.
 - Prior location dialogue is deliberately preserved, including references to
   waiting at a location; those lines can receive a separate narrative polish.
 
@@ -217,9 +218,11 @@ follower implementation:
 - Each Red starter obtained at level 5 with a genuinely shiny personality/OT
   combination; only Red's starter is forced shiny.
 - A coherent corresponding Blue starter selection.
-- Recurring Leaf story encounters and later Pokémon battles.
-- A substitute Psychic Gym Trainer conducting Sabrina's Saffron challenge while
-  she retains her official Gym Leader title.
+- Leaf's Viridian, Cerulean, Lavender and Saffron encounters are implemented in
+  [the story integration](red-leaf-sabrina-story.md); her later friendly battles
+  remain future work.
+- Sabrina personally conducts her Saffron challenge as official Gym Leader;
+  the earlier substitute-trainer proposal is superseded.
 - The combined Red/Sabrina battle-back sprite is now implemented; see
   [the battle companion report](sabrina-battle-companion.md). Sabrina observes
   while Red remains the only active trainer.

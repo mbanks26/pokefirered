@@ -216,6 +216,7 @@ PalletTown_ProfessorOaksLab_ChooseStarterScene::
 	closemessage
 	delay 60
 	msgbox PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne
+	call Family_EventScript_OakStarters
 	closemessage
 	delay 30
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalReact
@@ -293,6 +294,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattle::
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons
+	call Family_EventScript_BlueFirstBattle
 	closemessage
 	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_FaceDown
 	waitmovement 0
@@ -626,6 +628,7 @@ PalletTown_ProfessorOaksLab_EventScript_ReceiveDexScene::
 	call_if_eq VAR_FACING, DIR_WEST, PalletTown_ProfessorOaksLab_EventScript_DexSceneOakFacePlayerAndRivalWest
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_DexSceneOakFacePlayerAndRivalNorth
 	msgbox PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo
+	call Family_EventScript_OakPokedex
 	closemessage
 	call_if_eq VAR_FACING, DIR_NORTH, PalletTown_ProfessorOaksLab_EventScript_DexSceneOakWalkToDeskNorth
 	call_if_eq VAR_FACING, DIR_SOUTH, PalletTown_ProfessorOaksLab_EventScript_DexSceneOakWalkToDeskSouth

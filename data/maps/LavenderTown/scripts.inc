@@ -3,6 +3,7 @@ LavenderTown_MapScripts::
 	.byte 0
 
 LavenderTown_OnTransition::
+	call Leaf_EventScript_SetLavenderVisibility
 	setworldmapflag FLAG_WORLD_MAP_LAVENDER_TOWN
 	setvar VAR_MAP_SCENE_S_S_ANNE_2F_CORRIDOR, 1
 	setflag FLAG_HIDE_SS_ANNE_RIVAL

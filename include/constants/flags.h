@@ -48,11 +48,11 @@
 #define FLAG_SABRINA_FOLLOWER_ACTIVE 0x020
 #define FLAG_LEAF_VIRIDIAN_REUNION 0x021
 #define FLAG_HIDE_VIRIDIAN_LEAF    0x022
-#define FLAG_0x023               0x023
-#define FLAG_0x024               0x024
-#define FLAG_0x025               0x025
-#define FLAG_0x026               0x026
-#define FLAG_0x027               0x027
+#define FLAG_HIDE_GYM_SABRINA     0x023
+#define FLAG_SABRINA_GYM_DUTY_INTRO 0x024
+#define FLAG_HIDE_LATER_LEAF      0x025
+#define FLAG_LEAF_LEFT_CERULEAN     0x026
+#define FLAG_LEAF_EEVEE_EVOLVED    0x027
 
 // Hide/show flags
 #define FLAG_HIDE_BULBASAUR_BALL                           0x028
